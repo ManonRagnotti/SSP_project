@@ -1,6 +1,7 @@
 import {BrowserRouter as AppRouter, Route} from "react-router-dom";
 import React from "react";
 import RegisterContainer from "../view/Register/RegisterContainer";
+import UsersContainer from "../view/Users/UsersContainer";
 
 
 const Router = () => {
@@ -11,7 +12,7 @@ const Router = () => {
                     <AppRouter>
                         <div>slt c la home page</div>
                         <Route path="/register" component={RegisterContainer} />
-                        {/*<Route path="/login" component={LoginContainer} />*/}
+                        {<Route path="/users" component={UsersContainer} />}
                     </AppRouter>
                 </header>
                 <footer className="footer">
