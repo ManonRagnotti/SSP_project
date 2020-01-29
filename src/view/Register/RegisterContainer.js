@@ -1,23 +1,24 @@
-import React, {Component, Fragment} from 'react';
+import React, {useState} from 'react';
 import Register from "./Register";
 
 
-class RegisterContainer extends Component {
+const  RegisterContainer =()=> {
+  const initialValue = {
+    first_name: '',
+    last_name: '',
+    email: '',
+    password: '',
+  }
+  const [values, setValues]= useState(initialValue)
 
-    state = {
-        first_name: '',
-        last_name: '',
-        email: '',
-        password: '',
-    }
+  const handleSubmit = e => {
+    e.preventDefault()
+    console.log(values)
+  }
 
-    render(){
-        return(
-            <Fragment>
-                <Register/>
-            </Fragment>
+        return (
+                <Register values={values} setValues={setValues} handleSubmit={handleSubmit}/>
         )
-    }
 
 }
 
