@@ -5,19 +5,21 @@ import {Link} from "react-router-dom";
 
 
 
-const Register = () => {
+const Register = ({values, setValues, handleSubmit}) => {
+  const {first_name, last_name, email,password} = values
     return(
         <section className="register">
             <div className="register-container">
                 <h2 className="register-title">Inscription</h2>
-                <form className="register-form" >
+                <form className="register-form" onSubmit={handleSubmit}>
                     <div className="register-form_top">
                         <input
                             type="text"
                             name="first_name"
                             className="input-text"
                             placeholder="Prénom"
-                            // value={state.first_name}
+                            value={first_name}
+                            onChange={e=> setValues({...values,first_name: e.target.value})}
                             required
                         />
                         <input
@@ -25,7 +27,8 @@ const Register = () => {
                             name="last_name"
                             className="input-text"
                             placeholder="Nom"
-                            // value={state.last_name}
+                            value={last_name}
+                            onChange={e=> setValues({...values,last_name: e.target.value})}
                             required
                         />
                     </div>
@@ -34,7 +37,8 @@ const Register = () => {
                         name="email"
                         className="input-text"
                         placeholder="Adresse e-mail"
-                        // value={state.email}
+                        value={email}
+                        onChange={e=> setValues({...values,email: e.target.value})}
                         required
                     />
                     <input
@@ -42,10 +46,11 @@ const Register = () => {
                         name="password"
                         className="input-text"
                         placeholder="Mot de passe"
-                        // value={state.password}
+                        value={password}
+                        onChange={e=> setValues({...values,password: e.target.value})}
                         required
                     />
-                    <input type="submit" value="S'inscrire" />
+                  <input type="submit" value="S'inscrire" />
                 </form>
                 <Link to="/login" >J'ai déjà un compte</Link>
             </div>
