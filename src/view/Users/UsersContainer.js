@@ -4,7 +4,7 @@ import Users from "./Users";
 
 const  UsersContainer = () => {
 
-  const [data, setData] = useState({})
+  const [data, setData] = useState([])
 
   const options = {
       method: 'GET',
@@ -15,18 +15,18 @@ const  UsersContainer = () => {
   };
 
   useEffect(() => {
-    fetch("http://localhost:3000/car", options)
+    fetch("http://localhost:3000/visitor", options)
     .then(res => {
       if(res.ok)
         return res.json()
     })
     .then((res) => {
-      // res.ok ? setData(res.json()) : null
 
-      console.log(JSON.stringify(res));
-      setData(JSON.stringify(res))
+      console.log(res);
+
+      setData(res);
     })
-  });
+  }, []);
 
 
   return (
