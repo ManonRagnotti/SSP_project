@@ -4,7 +4,7 @@ import Cars from "./Cars";
 
 const  CarsContainer = () => {
 
-  const [data, setData] = useState({})
+  const [data, setData] = useState([])
 
   const options = {
       method: 'GET',
