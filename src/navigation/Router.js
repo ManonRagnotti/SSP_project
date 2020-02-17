@@ -2,6 +2,9 @@ import {BrowserRouter as AppRouter, Route} from "react-router-dom";
 import React from "react";
 import RegisterContainer from "../view/Register/RegisterContainer";
 import Header from "../components/Header";
+import UsersContainer from "../view/Users/UsersContainer";
+import CarsContainer from "../view/Cars/CarsContainer";
+import HotelsContainer from "../view/Hotels/HotelsContainer";
 
 
 const Router = () => {
@@ -13,7 +16,9 @@ const Router = () => {
                     <AppRouter>
                         <div>slt c la home page</div>
                         <Route path="/register" component={RegisterContainer} />
-                        {/*<Route path="/login" component={LoginContainer} />*/}
+                        <Route path="/users" component={UsersContainer} />
+                        <Route path="/cars" component={CarsContainer} />
+                        // <Route path="/hotels" component={HotelsContainer} />
                     </AppRouter>
                 </header>
                 <footer className="footer">
