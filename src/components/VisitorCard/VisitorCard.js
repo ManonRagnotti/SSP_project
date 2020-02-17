@@ -3,8 +3,7 @@ import './visitorCard.scss';
 
 export default ( {data} ) => {
   return (
-    <div>
-
+    <div className="boxCard">
       <ul>
         {
           (data && data.length)
@@ -20,7 +19,6 @@ export default ( {data} ) => {
           )
         }
       </ul>
-
     </div>
   )
 }
