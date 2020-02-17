@@ -3,8 +3,6 @@ import "antd/dist/antd.css";
 import {Link} from "react-router-dom";
 
 
-
-
 const Register = ({values, setValues, handleSubmit}) => {
   const {first_name, last_name, email,password} = values
     return(
@@ -50,9 +48,9 @@ const Register = ({values, setValues, handleSubmit}) => {
                         onChange={e=> setValues({...values,password: e.target.value})}
                         required
                     />
-                  <input type="submit" value="S'inscrire" />
+                  <input type="submit" className="btn-green" value="S'inscrire" />
                 </form>
-                <Link to="/login" >J'ai déjà un compte</Link>
+                <Link to="/login"  >J'ai déjà un compte</Link>
             </div>
         </section>
     )

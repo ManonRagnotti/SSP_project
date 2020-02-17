@@ -1,0 +1,56 @@
+.header {
+  padding: 1rem;
+  font-family: Montserrat;
+
+  &-container{
+    display: flex;
+    justify-content: space-between;
+    max-width: calc(100% - 4rem);
+    margin: 0 auto;
+    align-items: center;
+  }
+  &-icon{
+    &-mainLogo{
+      width: 250px;
+      height: 21px;
+    }
+  }
+
+  &-link {
+    color: black;
+    font-size: 20px;
+    margin: 30px;
+  }
+
+  &-is-active {
+    color: $darkblue;
+  }
+
+  &-profilPicture {
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+    background-color: #d8d8d8;
+  }
+
+  &-profilContainer {
+    display: flex;
+    align-items: center;
+  }
+
+  &-profilInfo {
+    display: flex;
+    flex-direction: column;
+    margin-left: 25px;
+
+  }
+
+  &-userName {
+    font-weight: 500;
+  }
+
+  &-userRoles {
+    font-weight: 300;
+  }
+
+}

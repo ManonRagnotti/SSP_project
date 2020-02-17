@@ -1,6 +1,7 @@
 import {BrowserRouter as AppRouter, Route} from "react-router-dom";
 import React from "react";
 import RegisterContainer from "../view/Register/RegisterContainer";
+import Header from "../components/Header";
 import UsersContainer from "../view/Users/UsersContainer";
 import CarsContainer from "../view/Cars/CarsContainer";
 import HotelsContainer from "../view/Hotels/HotelsContainer";
@@ -11,6 +12,7 @@ const Router = () => {
         <AppRouter>
             <div>
                 <header>
+                    <Header/>
                     <AppRouter>
                         <div>slt c la home page</div>
                         <Route path="/register" component={RegisterContainer} />
