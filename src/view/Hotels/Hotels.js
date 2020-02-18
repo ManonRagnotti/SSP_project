@@ -23,6 +23,8 @@ const Hotels = ({data, res}) => {
 
         <div className="hotelsContainer">
           <h3>Hotels</h3>
+          <button className="addNewHotel">+ Ajouter</button>
+
           <div className="headerList">
             <ul>
               <li className="name">Nom</li>
