@@ -1,9 +1,6 @@
 import React from 'react';
 import "antd/dist/antd.css";
-import {Link} from "react-router-dom";
 import Carte from "../../components/VisitorCard/VisitorCard";
-
-
 
 const Users = ({data, res}) => {
   // const visitors = data

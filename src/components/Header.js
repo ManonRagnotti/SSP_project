@@ -9,7 +9,7 @@ const Header = () => {
         <header className="header">
             <div className="header-container">
                 <div className="header-icon">
-                    <img className="header-icon-mainLogo" src={require('../assets/img/logo-ssp.png')}></img>
+                    <img alt="" className="header-icon-mainLogo" src={require('../assets/img/logo-ssp.png')}></img>
                 </div>
                 <div className="header-link-container">
                     <NavLink activeClassName="header-is-active" className="header-link" to="/planning">Planning</NavLink>

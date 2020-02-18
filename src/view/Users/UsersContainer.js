@@ -26,7 +26,7 @@ const  UsersContainer = () => {
 
       setData(res);
     })
-  }, []);
+  }, [options]);
 
 
   return (
