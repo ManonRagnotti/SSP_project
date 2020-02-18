@@ -6,8 +6,6 @@ import Carte from "../../components/VisitorCard/VisitorCard";
 
 
 const Users = ({data, res}) => {
-  // const visitors = data
-
   return(
     <div className="visitorContainer">
       <div className="card paris">
