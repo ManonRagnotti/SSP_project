@@ -11,7 +11,8 @@ const Users = ({data, res}) => {
       <div className="card paris">
         <h3>Salariés</h3>
         <button className="addNewVisitor">+ Ajouter</button>
-        <Carte data= {data.filter(visitor => visitor.area === "75")} />
+          // <Carte data= {data.filter(visitor => visitor.area === "75")} />
+        <Carte data= {data} />
       </div>
     </div>
   )
