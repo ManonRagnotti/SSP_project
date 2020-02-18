@@ -10,15 +10,14 @@ import HotelsContainer from "../view/Hotels/HotelsContainer";
 const Router = () => {
     return(
         <AppRouter>
-            <div>
+            <div className="app">
                 <header>
                     <Header/>
                     <AppRouter>
-                        <div>slt c la home page</div>
                         <Route path="/register" component={RegisterContainer} />
-                        <Route path="/users" component={UsersContainer} />
+                        <Route path="/salaried" component={UsersContainer} />
+                        <Route path="/hotels" component={HotelsContainer} />
                         <Route path="/cars" component={CarsContainer} />
-                        // <Route path="/hotels" component={HotelsContainer} />
                     </AppRouter>
                 </header>
                 <footer className="footer">
