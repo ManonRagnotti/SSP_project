@@ -1,11 +1,11 @@
 import React from 'react';
 import './modalUser.scss';
 
-export default ( {data} ) => {
+export default ( {data, onToggleModal} ) => {
   return (
     <div className="modalUserContainer">
       <div className="modalUser">
-        <div className="close">
+        <div className="close" onClick={onToggleModal}>
           <img alt="" className="icon-close" src={require('../../assets/img/close.svg')}></img>
         </div>
 
