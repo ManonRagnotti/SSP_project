@@ -15,8 +15,8 @@ const LeftSide = () => {
                 <Calendar fullscreen={false} />
             </div>
             <div className="container">
-                <Collapse expandIconPosition="right" bordered={false}>
-                    <Panel header="Binomes">
+                <Collapse expandIconPosition="right" bordered={false} defaultActiveKey={['1']}>
+                    <Panel header="Binomes" key="1">
                         <Radio.Group defaultValue={1}>
                             <div className="radio-container">
                                 <Radio value={1}>Binome 1</Radio>
@@ -37,8 +37,8 @@ const LeftSide = () => {
                 </Collapse>
             </div>
             <div className="container">
-                <Collapse expandIconPosition="right" bordered={false} className="urgency">
-                    <Panel header="Urgences">
+                <Collapse expandIconPosition="right" bordered={false} className="urgency" defaultActiveKey={['1']}>
+                    <Panel header="Urgences" key="1">
                         <CardDroppable />
                         <CardDroppable />
                         <CardDroppable />
@@ -47,8 +47,8 @@ const LeftSide = () => {
                 </Collapse>
             </div>
             <div className="container">
-                <Collapse expandIconPosition="right" bordered={false} className="replace">
-                    <Panel header="À replacer">
+                <Collapse expandIconPosition="right" bordered={false} className="replace" defaultActiveKey={['1']}>
+                    <Panel header="À replacer" key="1">
                         <CardDroppable />
                         <CardDroppable />
                     </Panel>
