@@ -1,7 +1,5 @@
 import React from 'react';
 import "antd/dist/antd.css";
-import {Link} from "react-router-dom";
-import { Table, Divider, Tag } from 'antd';
 
 
 

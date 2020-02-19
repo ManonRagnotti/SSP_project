@@ -26,7 +26,7 @@ const  CarsContainer = () => {
 
       setData(res);
     })
-  }, []);
+  }, [options]);
 
 
   return (
