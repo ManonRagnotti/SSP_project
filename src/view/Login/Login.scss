@@ -1,0 +1,25 @@
+.login{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    &-left,
+    &-right{
+        width: 49%;
+    }
+    &-left{
+        border: 1px solid red;
+    }
+    &-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &_input {
+            border: none;
+            border-bottom: 1px solid black;
+        }
+        &_submit {
+            border: 1px solid black;
+            padding: 3px 5px;
+        }
+    }
+}

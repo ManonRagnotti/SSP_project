@@ -1,0 +1,130 @@
+@import "../common/colors.scss";
+@import "../common/mixins.scss";
+
+.planningContainer {
+  background-color: $purple-light;
+  display: flex;
+  .title {
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
+  }
+  .leftSide {
+    padding: 20px;
+    max-width: 20%;
+    display: grid;
+    background-color: white;
+    margin-right: auto;
+    overflow: hidden;
+    .ant-collapse-item {
+      border: none;
+      color: black;
+      font-weight: bold;
+      font-size: 21px;
+      .ant-collapse-header {
+        max-width: 320px;
+        padding: 12px 0;
+      }
+    }
+    .calendar {
+      background-color: white;
+      width: 300px;
+      border-radius: 25px;
+      .ant-fullcalendar-selected-day .ant-fullcalendar-value {
+        background-color: $darkblue;
+        color: white;
+      }
+    }
+    .container {
+      background-color: transparent;
+      padding: 20px;
+      .visitorName {
+        margin-top: 10px;
+        font-size: 16px;
+      }
+
+      .radio-container {
+        margin-bottom: 15px;
+        label {
+          font-size: 16px;
+        }
+        .radio-content {
+          padding: 5px;
+          margin-left: 10px;
+          width: 150%;
+          &:hover {
+            color: $light-grey;
+          }
+          i {
+            float: right;
+            padding: 2px;
+            &:hover{
+              color: red;
+            }
+          }
+        }
+      }
+      .urgency {
+        .card {
+          .ant-card {
+            @include card;
+            background-color: $purple-red;
+            .ant-card-body {
+              padding: 10px;
+              margin: auto;
+            }
+          }
+          &:hover {
+            opacity: 0.5;
+          }
+        }
+      }
+      .replace {
+        .card {
+          .ant-card {
+            @include card;
+            background-color: $green-pastel;
+            .ant-card-body {
+              padding: 10px;
+              margin: auto;
+            }
+          }
+          &:hover {
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+  }
+  .pages-button {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 20px;
+    width: 70%;
+
+    .ant-tabs-ink-bar {
+      background-color: transparent;
+    }
+    .ant-tabs-bar {
+      border: none;
+    }
+    .ant-tabs-tab {
+      background-color: white;
+      border-radius: 12px;
+      min-width: 120px;
+      text-align: center;
+      margin-right: 30px;
+      color: $light-grey;
+      &:hover {
+        color: white;
+        background-color: $darkblue;
+        opacity: 0.5;
+      }
+    }
+    .ant-tabs-tab-active {
+      font-weight: bold;
+      color: white;
+      background-color: $darkblue;
+    }
+  }
+}
