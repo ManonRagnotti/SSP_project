@@ -96,7 +96,25 @@
         .card {
           .ant-card {
             @include card;
-            background-color: $green-pastel;
+            width: 90%;
+            // background-color: $green-pastel;
+            background: #4390CC;
+            .ant-card-body {
+              padding: 10px;
+              margin: auto;
+            }
+          }
+          &:hover {
+            opacity: 0.5;
+          }
+        }
+      }
+      .suggest {
+        .card {
+          .ant-card {
+            @include card;
+            width: 90%;
+            background-color: #F5D547;
             .ant-card-body {
               padding: 10px;
               margin: auto;

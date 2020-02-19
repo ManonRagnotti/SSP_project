@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import Users from "./Users";
+import LeftSide from "../../components/Planning/index.js"
 
 
 const  UsersContainer = () => {
@@ -10,7 +11,7 @@ const  UsersContainer = () => {
       method: 'GET',
       headers: {
           'Accept': 'application/json',
-          'ContentType': 'text/plain'
+          'ContentType': 'application/json'
       },
   };
 
@@ -18,6 +19,7 @@ const  UsersContainer = () => {
     fetch("http://localhost:3000/visitor", options)
     .then(res => {
       if(res.ok)
+      console.log(res)
         return res.json()
     })
     .then((res) => {
@@ -26,7 +28,7 @@ const  UsersContainer = () => {
 
       setData(res);
     })
-  }, [options]);
+  }, []);
 
 
   return (
