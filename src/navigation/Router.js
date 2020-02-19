@@ -4,6 +4,9 @@ import RegisterContainer from "../view/Register/RegisterContainer";
 import Header from "../components/Header";
 import UsersContainer from "../view/Users/UsersContainer";
 import CarsContainer from "../view/Cars/CarsContainer";
+import HotelsContainer from "../view/Hotels/HotelsContainer";
+import LoginContainer from "../view/Login/LoginContainer";
+
 import Planning from "../components/Planning/index";
 
 
@@ -15,7 +18,8 @@ const Router = () => {
                     <Header/>
                     <AppRouter>
                         <Route path="/register" component={RegisterContainer} />
-                        <Route path="/salaried" component={UsersContainer} />
+                        <Route path="/login" component={LoginContainer} />
+                        <Route path="/users" component={UsersContainer} />
                         <Route path="/hotels" component={HotelsContainer} />
                         <Route path="/cars" component={CarsContainer} />
                         <Route path="/planning" component={Planning} />
