@@ -1,8 +1,7 @@
 import React, {useState} from 'react';
 import ReactDOM from 'react-dom';
-import 'antd/dist/antd.css';
+
 import './Hotels.scss';
-import { Table, Button } from 'antd';
 import Carte from "../../components/HotelCard/HotelCard";
 
 

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import "antd/dist/antd.css";
+import './Users.scss';
 import Carte from "../../components/VisitorCard/VisitorCard";
 import PopUp from "../../components/ModalUser/ModalUser";
 
@@ -22,14 +23,14 @@ const Users = ({data, res}) => {
         <h3>Salariés</h3>
         <button className="addNewVisitor">+ Ajouter</button>
       <div className="visitorCard">
-          {(data && data.length) && data.map(v => (
-            <div onClick={() => setShowPopup(!showPopup)}>
+          {(data && data.length) && data.map((v, index) => (
+            <div onClick={() => setShowPopup(!showPopup)} key={index}>
               <Carte data= {data} v={v}/>
           </div>
         ))}
         </div>
       </div>
-      {showPopup ? <PopUp /> : null}
+      {showPopup ? <PopUp onToggleModal={() => setShowPopup(!showPopup)} /> : null}
 
     </div>
   )
