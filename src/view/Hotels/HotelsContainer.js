@@ -19,6 +19,8 @@ const  HotelsContainer = () => {
     "http://localhost:3000/hotel"
   ];
 
+
+
   useEffect(() => {
     // fetch("http://localhost:3000/hotelScore", options),
     // fetch("http://localhost:3000/hotel", options)

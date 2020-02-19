@@ -1,34 +1,38 @@
 import React from 'react';
+import "../Cars/Cars.scss"
 import "antd/dist/antd.css";
 
 
-
-
-const Cars = ({data, res}) => {
+const Cars = ({data, res, handleRemoveItem}) => {
 
   return(
     <div className="cars">
-      <h2>Véhicules</h2>
-      <button>Ajouter</button>
-      <ul>
+      <div className="cars-container">
+        <h3>Véhicules</h3>
+        <button className="cars-add">Ajouter</button>
+
         {
           (data && data.length)
           && data.map (
             c => {
               return (
-                <li className="car">
-                  <span className="carType">{c.carType}</span>
-                  <span className="registration">{c.registration}</span>
-                  <div className="car-edit">
-                    <button>Edit</button>
-                    <button>Delete</button>
+                <div className="cars-items">
+                  <span className="cars-items_type">{c.carType}</span>
+                  <span className="cars-items_registration">{c.registration}</span>
+                  <div className="cars-edit">
+                    <button className="cars-edit_btn edit">
+                      <img alt="" className="icon-pen" src={require('../../assets/img/pen.svg')}></img>
+                    </button>
+                    <button className="cars-edit_btn delete" onClick={() => handleRemoveItem()}>
+                      <img alt="" className="icon-trash" src={require('../../assets/img/trash.svg')}></img>
+                    </button>
                   </div>
-                </li>
+                </div>
               )
             }
           )
         }
-      </ul>
+      </div>
     </div>
 
   )
@@ -36,4 +40,4 @@ const Cars = ({data, res}) => {
 };
 
 
-export default Cars
+export default Cars;
