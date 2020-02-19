@@ -17,28 +17,27 @@ const Router = () => {
                 <header>
                     <Header/>
                 </header>
-                    <AppRouter>
-                        <Route path="/register" component={RegisterContainer} />
-                        <Route path="/login" component={LoginContainer} />
-                        <Route path="/users" component={UsersContainer} />
-                        <Route path="/hotels" component={HotelsContainer} />
-                        <Route path="/cars" component={CarsContainer} />
-                        <Route path="/planning" component={Planning} />
-                    </AppRouter>
                 <Switch>
-                    <Route path="/salaried">
+                    <Route path="/register">
+                        <RegisterContainer />
+                    </Route>
+                    <Route path="/login">
+                        <LoginContainer />
+                    </Route>
+                    <Route path="/users">
                         <UsersContainer />
                     </Route>
+
                     <Route path="/hotels">
                         <HotelsContainer />
                     </Route>
                     <Route path="/cars">
                         <CarsContainer />
                     </Route>
+                    <Route path="/planning">
+                        <Planning />
+                    </Route>
                 </Switch>
-                <footer className="footer">
-                    <p className="footer-text">SAMU SOCIAL PROJECT © 2020 - Projet réalisé par Manon, Mehdi, Enzo, Léa, Eugénie, Angeline et Fabien</p>
-                </footer>
             </div>
         </AppRouter>
     )

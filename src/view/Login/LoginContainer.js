@@ -8,10 +8,18 @@ const  LoginContainer =()=> {
     password: '',
   }
   const [values, setValues]= useState(initialValue)
+//   const handleSubmit = e => {
+//     e.preventDefault()
+//     console.log(values)
+//   }
   const handleSubmit = e => {
-    e.preventDefault()
-    console.log(values)
-  }
+    e.preventDefault();
+    this.props.form.validateFields((err, values) => {
+      if (!err) {
+        console.log('Received values of form: ', values);
+      }
+    });
+  };
         return (
                 <Login values={values} setValues={setValues} handleSubmit={handleSubmit}/>
         )
