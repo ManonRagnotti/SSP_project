@@ -33,12 +33,13 @@
   }
 
   .hotelsContainer {
-    border-radius: 35px;
-    background-color: #fcfcfd;
     width: 90%;
     margin: 0 auto;
+    border-radius: 35px;
+    background-color: #fcfcfd;
     padding: 20px 40px;
     position: relative;
+    overflow: hidden;
 
     h3 {
       font-family: Montserrat;

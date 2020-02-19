@@ -6,8 +6,6 @@ import { Table, Button } from 'antd';
 import Carte from "../../components/HotelCard/HotelCard";
 
 
-
-
 const Hotels = ({data, res}) => {
 
 
