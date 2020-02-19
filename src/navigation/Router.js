@@ -1,4 +1,4 @@
-import { BrowserRouter as AppRouter, Route } from "react-router-dom";
+import { BrowserRouter as AppRouter, Route, Switch } from "react-router-dom";
 import React from "react";
 import RegisterContainer from "../view/Register/RegisterContainer";
 import Header from "../components/Header";
@@ -16,6 +16,7 @@ const Router = () => {
             <div className="app">
                 <header>
                     <Header/>
+                </header>
                     <AppRouter>
                         <Route path="/register" component={RegisterContainer} />
                         <Route path="/login" component={LoginContainer} />
@@ -24,7 +25,17 @@ const Router = () => {
                         <Route path="/cars" component={CarsContainer} />
                         <Route path="/planning" component={Planning} />
                     </AppRouter>
-                </header>
+                <Switch>
+                    <Route path="/salaried">
+                        <UsersContainer />
+                    </Route>
+                    <Route path="/hotels">
+                        <HotelsContainer />
+                    </Route>
+                    <Route path="/cars">
+                        <CarsContainer />
+                    </Route>
+                </Switch>
                 <footer className="footer">
                     <p className="footer-text">SAMU SOCIAL PROJECT © 2020 - Projet réalisé par Manon, Mehdi, Enzo, Léa, Eugénie, Angeline et Fabien</p>
                 </footer>

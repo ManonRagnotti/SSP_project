@@ -44,9 +44,9 @@ const  HotelsContainer = () => {
         return {...hotel, ...visiteAndRate}
       })
 
-      console.log(filteredArr)
-
-      console.log(res)
+      // console.log(filteredArr)
+      //
+      // console.log(res)
 
       setData(filteredArr);
     })

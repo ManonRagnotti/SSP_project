@@ -6,14 +6,12 @@ import { Table, Button } from 'antd';
 import Carte from "../../components/HotelCard/HotelCard";
 
 
-
-
 const Hotels = ({data, res}) => {
 
 
     return (
       <div className="hotelsPage">
-        <ul>
+        <ul className="filter">
           <li>Paris</li>
           <li>93</li>
           <li>78/95</li>
@@ -22,18 +20,20 @@ const Hotels = ({data, res}) => {
         </ul>
 
         <div className="hotelsContainer">
-        <h3>Hotels</h3>
-          <table>
-            <thead>
-              <tr>
-                <th>Nom</th>
-                <th>Adresse</th>
-                <th>Notation</th>
-                <th>Dernière date de visite</th>
-              </tr>
-            </thead>
-            <Carte data={data} />
-          </table>
+          <h3>Hotels</h3>
+          <button className="addNewHotel">+ Ajouter</button>
+
+          <div className="headerList">
+            <ul>
+              <li className="name">Nom</li>
+              <li className="address">Adresse</li>
+              <li className="score">Notation</li>
+              <li className="visite">Dernière date de visite</li>
+            </ul>
+          </div>
+
+          <Carte data={data} />
+
         </div>
 
 

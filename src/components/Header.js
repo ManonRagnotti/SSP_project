@@ -13,7 +13,7 @@ const Header = () => {
                 </div>
                 <div className="header-link-container">
                   <NavLink activeClassName="header-is-active" className="header-link" to="/planning">Planning</NavLink>
-                  <NavLink activeClassName="header-is-active" className="header-link" to="/salaried">Salarié</NavLink>
+                  <NavLink activeClassName="header-is-active" className="header-link" to="/users">Salarié</NavLink>
                   <NavLink activeClassName="header-is-active" className="header-link" to="/hotels">Hôtel</NavLink>
                   <NavLink activeClassName="header-is-active" className="header-link" to="/cars">Véhicules</NavLink>
                 </div>

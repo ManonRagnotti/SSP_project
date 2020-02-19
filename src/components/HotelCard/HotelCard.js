@@ -6,22 +6,22 @@ export default ( {data} ) => {
 
 
   return (
-    <tbody className="hotelcard">
+    <div className="hotelcard">
         {
           (data && data.length)
           && data.map (
             h => {
               return (
-                <tr>
-                  <td className="name">{h.name}</td>
-                  <td className="address">{h.address}</td>
-                  <td className="score">{h.visite? h.score: ""}</td>
-                  <td className="visite">{h.visite ? new Date(h.visite).toLocaleDateString() : ""}</td>
-                </tr>
+                <ul className="hotelInfo">
+                  <li className="name">{h.name}</li>
+                  <li className="address">{h.address}</li>
+                  <li className="score">{h.visite? h.score: ""}</li>
+                  <li className="visite">{h.visite ? new Date(h.visite).toLocaleDateString() : ""}</li>
+                </ul>
               )
             }
           )
         }
-    </tbody>
+    </div>
   )
 }
