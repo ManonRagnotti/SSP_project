@@ -1,0 +1,30 @@
+.hotelcard {
+  max-height: 500px;
+  overflow-y: scroll;
+
+  .hotelInfo {
+    height: 67px;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px 0 rgba(129, 129, 129, 0.5);
+    background-color: #fcfcfd;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 2px 20px 2px ;
+    li {
+      list-style: none;
+      &.name {
+        width: 30%;
+      }
+      &.address {
+        width: 30%;
+      }
+      &.score {
+        width: 20%;
+      }
+      &.visite {
+        width: 18%;
+      }
+    }
+  }
+}
