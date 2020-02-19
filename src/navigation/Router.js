@@ -11,15 +11,14 @@ import Planning from "../components/Planning/index";
 
 
 const Router = () => {
+
     return (
         <AppRouter>
             <div className="app">
-                <header>
-                    <Header/>
-                </header>
+                <Header/>
                 <Switch>
                     <Route path="/register">
-                        <RegisterContainer />
+                        <RegisterContainer  />
                     </Route>
                     <Route path="/login">
                         <LoginContainer />
