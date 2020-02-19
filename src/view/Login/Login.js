@@ -4,22 +4,27 @@ import "antd/dist/antd.css";
 import { Switch } from 'antd';
 import {Link} from "react-router-dom";
 const Login = ({values, setValues, handleSubmit}) => {
-  const {first_name, last_name, email,password} = values
+  const {email,password} = values
     return(
         <section className="login">
             <div className="login-left">
+                <div className="login-icon">
+                    <img alt="" className="login-icon-mainLogo" src={require('../../assets/img/logo-ssp.png')}></img>
+                </div>
             </div>
             <div className="login-right">
                 <h1>Vous êtes :</h1>
-                <span>Planificateur</span> <Switch defaultChecked /> <span>Intervenant</span>
+                <div className="login-switch">
+                    <span>Planificateur</span> <Switch className="login-switch-btn" defaultChecked /> <span>Intervenant</span>
+                </div>
                 <form className="login-form">
                     <input
                         type="text"
                         name="first_name"
                         className="login-form_input mail"
-                        placeholder="Prénom"
-                        value={first_name}
-                        onChange={e=> setValues({...values,first_name: e.target.value})}
+                        placeholder="Adresse email"
+                        value={email}
+                        onChange={e=> setValues({...values,email: e.target.value})}
                         required
                     />
                     <input
