@@ -1,12 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import Cars from "./Cars";
 
-
 const  CarsContainer = () => {
 
-
-
-  
   const [data, setData, list, setList] = useState([])
   
   const handleRemoveItem = (e) => {

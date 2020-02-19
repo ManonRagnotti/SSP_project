@@ -1,16 +1,18 @@
 import React from "react";
 import { Tabs } from 'antd';
-import FullCalendar from '@fullcalendar/react';
-import dayGridPlugin from '@fullcalendar/daygrid';
+import Calendar from '../../Calendar/Calendar'
+
 
 const { TabPane } = Tabs;
 
 const SectorNavigation = () => {
+
+      
     return (
         <div className="pages-button">
             <Tabs defaultActiveKey="1" size="large">
                 <TabPane tab="Paris" key="1">
-                    <FullCalendar defaultView="dayGridWeek" plugins={[dayGridPlugin]} />
+                    <Calendar />
                 </TabPane>
                 <TabPane tab="93" key="2">
                 </TabPane>

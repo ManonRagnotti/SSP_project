@@ -1,5 +1,6 @@
 ## Personnes du groupe concernées par le front
 
+
 Manon Ragnotti
 
 Fabien Marques
@@ -9,6 +10,7 @@ Eugénie Roques
 ## Dossier d'argumentation
 
 ### Argumentation liée à l'expertise
+
 
 Nous avons choisi React comme technologie principale. En effet, nous avons beaucoup travaillé cette librairie cette année et cela nous paraissait etre le choix le plus pertinent pour commencer par un Back Office et continuer sur une application. 
 
@@ -29,8 +31,27 @@ Nous avons également choisi d'utiliser la librairie Fullcalendar car celle ci e
 
 [FullCalendar](https://fullcalendar.io/)
 
+
+## Liens
+
+### Back-office deployé
+
+https://github.com/Mehdi-Verfaillie/samuSocial-api
+
+ReactJs
+
+ - react-router-dom
+ 
+Sass
+
+Ant Design
+
+FullCalendar
+
 ## Liens
  
 ### Back-office deployé 
 [repo API](https://github.com/Mehdi-Verfaillie/samuSocial-api)
+
+
 

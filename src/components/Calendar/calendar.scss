@@ -1,0 +1,6 @@
+@import '~@fullcalendar/core/main.css';
+@import '~@fullcalendar/daygrid/main.css';
+
+.fc-scroller.fc-day-grid-container{
+    max-height: 375px;
+}
