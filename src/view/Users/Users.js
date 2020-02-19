@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import "antd/dist/antd.css";
 import './Users.scss';
 import Carte from "../../components/VisitorCard/VisitorCard";
-import PopUp from "../../components/ModalUser/ModalUser";
+import Modal from "../../components/ModalUser/ModalUser";
 
 
 const Users = ({data, res}) => {
@@ -30,7 +30,7 @@ const Users = ({data, res}) => {
         ))}
         </div>
       </div>
-      {showPopup ? <PopUp onToggleModal={() => setShowPopup(!showPopup)} /> : null}
+      {showPopup ? <Modal onToggleModal={() => setShowPopup(!showPopup)} /> : null}
 
     </div>
   )

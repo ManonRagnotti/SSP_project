@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, {useState, useEffect} from 'react';
 import { Calendar, Collapse, Radio, Icon } from "antd";
 
 import "../../styles/components/planning.scss"
@@ -7,8 +7,30 @@ import SectorNavigation from "./SectorNavigation";
 
 const { Panel } = Collapse;
 
-const LeftSide = () => {
+const LeftSide = ({ res}) => {
+  const [data, setData] = useState([])
 
+  const options = {
+      method: 'GET',
+      headers: {
+          'Accept': 'application/json',
+          'ContentType': 'application/json'
+      },
+  };
+
+  useEffect(() => {
+    fetch("http://localhost:3000/visitor", options)
+    .then(res => {
+      if(res.ok)
+      console.log(res)
+        return res.json()
+    })
+    .then((res) => {
+      setData(res);
+    })
+  }, []);
+
+  
     return (
         <div className="leftSide">
             <div className="calendar">
@@ -22,14 +44,19 @@ const LeftSide = () => {
                                 <Radio value={1}>Binome 1</Radio>
                                 <div className="radio-content" draggable={true}>
                                     Vanessa Salarié 5
+                                    {(data && data.length) && data.slice(0,2).map((v, index) => (
+                                      <span className="lastName">{v.lastName}</span>
+                                  ))}
                                     <Icon type="close"/>
                                 </div>
                             </div>
                             <div className="radio-container">
                                 <Radio value={2}>Binome 2</Radio>
                                 <div className="radio-content" draggable={true}>
-                                    Vanessa Salarié 5
-                                    <Icon type="close"/>
+                                  {(data && data.length) && data.slice(2,4).map((v, index) => (
+                                    <span className="lastName">{v.lastName}</span>
+                                ))}
+                                  <Icon type="close"/>
                                 </div>
                             </div>
                         </Radio.Group>
@@ -49,6 +76,14 @@ const LeftSide = () => {
             <div className="container">
                 <Collapse expandIconPosition="right" bordered={false} className="replace" defaultActiveKey={['1']}>
                     <Panel header="À replacer" key="1">
+                        <CardDroppable />
+                        <CardDroppable />
+                    </Panel>
+                </Collapse>
+            </div>
+            <div className="container">
+                <Collapse expandIconPosition="right" bordered={false} className="suggest" defaultActiveKey={['1']}>
+                    <Panel header="Suggestions" key="1">
                         <CardDroppable />
                         <CardDroppable />
                     </Panel>
