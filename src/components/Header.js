@@ -12,10 +12,10 @@ const Header = () => {
                     <img alt="" className="header-icon-mainLogo" src={require('../assets/img/logo-ssp.png')}></img>
                 </div>
                 <div className="header-link-container">
-                    <NavLink activeClassName="header-is-active" className="header-link" to="/planning">Planning</NavLink>
-                    <NavLink activeClassName="header-is-active" className="header-link" to="/salaried">Salarié</NavLink>
-                    <NavLink activeClassName="header-is-active" className="header-link" to="/hotel">Hôtel</NavLink>
-                    <NavLink activeClassName="header-is-active" className="header-link" to="/car">Véhicules</NavLink>
+                  <NavLink activeClassName="header-is-active" className="header-link" to="/planning">Planning</NavLink>
+                  <NavLink activeClassName="header-is-active" className="header-link" to="/salaried">Salarié</NavLink>
+                  <NavLink activeClassName="header-is-active" className="header-link" to="/hotels">Hôtel</NavLink>
+                  <NavLink activeClassName="header-is-active" className="header-link" to="/cars">Véhicules</NavLink>
                 </div>
                 <div className="header-profilContainer">
                 <div className="header-profilPicture"></div>

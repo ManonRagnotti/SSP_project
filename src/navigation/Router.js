@@ -10,15 +10,15 @@ import Planning from "../components/Planning/index";
 const Router = () => {
     return (
         <AppRouter>
-            <div>
+            <div className="app">
                 <header>
                     <Header/>
                     <AppRouter>
                         <Route path="/register" component={RegisterContainer} />
-                        <Route path="/users" component={UsersContainer} />
+                        <Route path="/salaried" component={UsersContainer} />
+                        <Route path="/hotels" component={HotelsContainer} />
                         <Route path="/cars" component={CarsContainer} />
                         <Route path="/planning" component={Planning} />
-                        {/* <Route path="/hotels" component={HotelsContainer} /> */}
                     </AppRouter>
                 </header>
                 <footer className="footer">
