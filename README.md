@@ -1,7 +1,9 @@
 ## Personnes du groupe concernées par le front
 
 Manon Ragnotti
+
 Fabien Marques
+
 Eugénie Roques
 
 ## Dossier d'argumentation
@@ -12,9 +14,13 @@ Eugénie Roques
 ## Technologies et librairies utilisées
 
 ReactJs
+
  - react-router-dom
+ 
 Sass
+
 Ant Design
+
 FullCalendar
 
 ## Liens
