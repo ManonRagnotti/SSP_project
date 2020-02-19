@@ -26,5 +26,33 @@
         width: 18%;
       }
     }
+    &-edit {
+      right: 50px;
+      position: absolute;
+      color: #fff;
+      padding: 2px 15px;
+      &_btn{
+          border: none;
+          border-radius: 5px;
+          margin-left: 10px;
+      }
+      .edit{
+          background-color:#709ea5;
+          .icon-pen{
+            width: 17px;
+            height: auto;
+            padding: 3px 0;
+
+          }
+      }
+      .delete{
+          background-color: #c14141;
+          .icon-trash{
+            padding: 2px 0;
+          }
+      }
+    }
   }
+  
 }
+

@@ -2,7 +2,7 @@ import React from 'react';
 import './Login.scss';
 import "antd/dist/antd.css";
 import { Switch } from 'antd';
-import {Link} from "react-router-dom";
+
 const Login = ({values, setValues, handleSubmit}) => {
   const {email,password} = values
     return(
@@ -36,7 +36,7 @@ const Login = ({values, setValues, handleSubmit}) => {
                         onChange={e=> setValues({...values,password: e.target.value})}
                         required
                         />
-                    <input type="submit" className="login-form_submit" value="Valider" />
+                    <input type="submit" className="login-form_submit" value="Valider" onClick={handleSubmit()}/>
                 </form>
             </div>
         </section>

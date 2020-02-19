@@ -4,7 +4,17 @@ import Cars from "./Cars";
 
 const  CarsContainer = () => {
 
-  const [data, setData] = useState([])
+
+
+  
+  const [data, setData, list, setList] = useState([])
+  
+  const handleRemoveItem = (e) => {
+    console.log('hello');
+    
+    const name = e.target.value;
+     setList(list.filter((e)=>(e !== name)));
+   };
 
   const options = {
       method: 'GET',
@@ -22,7 +32,7 @@ const  CarsContainer = () => {
     })
     .then((res) => {
 
-      console.log(res);
+      // console.log(res);
 
       setData(res);
     })
@@ -30,7 +40,7 @@ const  CarsContainer = () => {
 
 
   return (
-    <Cars data={data}/>
+    <Cars data={data} handleRemoveItem={handleRemoveItem}/>
   )
 
 }
