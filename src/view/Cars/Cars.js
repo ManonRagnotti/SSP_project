@@ -9,29 +9,31 @@ const Cars = ({data, res, handleRemoveItem}) => {
     <div className="cars">
       <div className="cars-container">
         <h3>Véhicules</h3>
-        <button className="cars-add">Ajouter</button>
+        <button className="cars-add">+ Ajouter</button>
 
-        {
-          (data && data.length)
-          && data.map (
-            c => {
-              return (
-                <div className="cars-items">
-                  <span className="cars-items_type">{c.carType}</span>
-                  <span className="cars-items_registration">{c.registration}</span>
-                  <div className="cars-edit">
-                    <button className="cars-edit_btn edit">
-                      <img alt="" className="icon-pen" src={require('../../assets/img/pen.svg')}></img>
-                    </button>
-                    <button className="cars-edit_btn delete" onClick={() => handleRemoveItem()}>
-                      <img alt="" className="icon-trash" src={require('../../assets/img/trash.svg')}></img>
-                    </button>
+        <div className="carsCard">
+          {
+            (data && data.length)
+            && data.map (
+              c => {
+                return (
+                  <div className="cars-items">
+                    <span className="cars-items_type">{c.carType}</span>
+                    <span className="cars-items_registration">{c.registration}</span>
+                    <div className="cars-edit">
+                      <button className="cars-edit_btn edit">
+                        <img alt="" className="icon-pen" src={require('../../assets/img/pen.svg')}></img>
+                      </button>
+                      <button className="cars-edit_btn delete" onClick={() => handleRemoveItem()}>
+                        <img alt="" className="icon-trash" src={require('../../assets/img/trash.svg')}></img>
+                      </button>
+                    </div>
                   </div>
-                </div>
-              )
-            }
-          )
-        }
+                )
+              }
+            )
+          }
+        </div>
       </div>
     </div>
 
