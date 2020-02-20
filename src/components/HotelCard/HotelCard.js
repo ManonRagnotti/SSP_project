@@ -5,7 +5,7 @@ export default ( {data, setRefresh} ) => {
 
   //DELETE hotel
   const deleteData = async (_id) => {
-    const res = await fetch('http://localhost:3000/hotel/' + _id, {
+    const res = await fetch('/api/hotel/' + _id, {
       method: 'DELETE'
     })
     await setRefresh(true)
