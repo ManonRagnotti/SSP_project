@@ -35,7 +35,7 @@ export default function Calendar() {
             weekends={false}
             locale="fr"
             events={[{id: 'a',
-            title: 'my event',
+            title: 'hotel de saint montreuil',
             start: '2020-02-20'}]}
         />
         </div>
