@@ -6,7 +6,6 @@ import LeftSide from "../../components/Planning/index.js"
 const  UsersContainer = () => {
 
   const [data, setData] = useState([])
-  
 
   const options = {
       method: 'GET',
