@@ -10,20 +10,22 @@ import interactionPlugin, { Draggable } from '@fullcalendar/interaction';
 
 
 export default function Calendar() {
+
     useEffect(() => {
         let draggableEl = document.getElementById("external-events");
         new Draggable(draggableEl, {
             itemSelector: ".fc-event",
             eventData: function(eventEl) {
-              let title = eventEl.getAttribute("title");
-              let id = eventEl.getAttribute("data");
+              let hotelName = eventEl.getAttribute("hotelName");
+              let score = eventEl.getAttribute("score");
               return {
-                title: title,
-                id: id
+                hotelName:hotelName,
+                score: score
               };
             }
           })
       }, [])
+
     return(
         <div>
         <Fullcalendar 
@@ -33,7 +35,7 @@ export default function Calendar() {
             weekends={false}
             locale="fr"
             events={[{id: 'a',
-            title: 'my event',
+            title: 'hotel de saint montreuil',
             start: '2020-02-20'}]}
         />
         </div>

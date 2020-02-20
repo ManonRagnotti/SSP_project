@@ -59,7 +59,7 @@ const CardDroppable = ({res}) => {
 
     return (
         <div id="external-events" className="card">
-            <Card draggable={true} className="fc-event" data="1">
+            <Card draggable={true} className="fc-event" hotelName="hotelName" score="score">
               {(data && data.length) ? (
                 <div className="infoHotel">
                   <span className="name">{data[randomHotel].name}</span>
