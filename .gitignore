@@ -22,3 +22,8 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+terraform.tfstate
+terraform.tfstate.backup
+id_rsa
+id_rsa.pub

@@ -16,8 +16,8 @@ const  HotelsContainer = () => {
   };
 
   const urls = [
-    "http://localhost:3000/hotelScore",
-    "http://localhost:3000/hotel"
+    "/api/hotelScore",
+    "/api/hotel"
   ];
 
 

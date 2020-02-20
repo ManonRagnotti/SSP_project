@@ -16,7 +16,7 @@ const  UsersContainer = () => {
   };
 
   useEffect(() => {
-    fetch("http://localhost:3000/visitor", options)
+    fetch("/api/visitor", options)
     .then(res => {
       if(res.ok)
       console.log(res)
