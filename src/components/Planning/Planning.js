@@ -7,8 +7,10 @@ import SectorNavigation from "./SectorNavigation/SectorNavigation";
 
 const {Panel} = Collapse;
 
-/* * Left side planning : Content of left side panel in planning page.
-* There is a calendar, pairs of the chosen sector, emergencies, hotels to be replaced and suggestions */
+/*
+* Left side planning : Content of left side panel in planning page.
+* There is a calendar, pairs of the chosen sector, emergencies, hotels to be replaced and suggestions
+*/
 
 const LeftSide = ({res}) => {
 
@@ -29,6 +31,7 @@ const LeftSide = ({res}) => {
     }).then((res) => {
       setData(res);
     })
+    // eslint-disable-next-line react-hooks/exhaustive-deps,
   }, []);
 
   return (<div className="leftSide" id="external-events">

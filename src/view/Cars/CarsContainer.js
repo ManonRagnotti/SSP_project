@@ -8,7 +8,7 @@ const CarsContainer = () => {
   */
 
   const [data, setData] = useState([])
-  const [refresh, setRefresh]= useState(false)
+  const [refresh, setRefresh] = useState(false)
 
   const options = {
     method: 'GET',
@@ -34,7 +34,7 @@ const CarsContainer = () => {
     if (refresh) {
       getData()
     }
-// eslint-disable-next-line react-hooks/exhaustive-deps,
+    // eslint-disable-next-line react-hooks/exhaustive-deps,
   }, [refresh]);
 
   return (<Cars setRefresh={setRefresh} data={data}/>)
