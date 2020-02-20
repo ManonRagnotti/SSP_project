@@ -6,6 +6,7 @@ import LeftSide from "../../components/Planning/index.js"
 const  UsersContainer = () => {
 
   const [data, setData] = useState([])
+  const [refresh, setRefresh]= useState(false)
 
   const options = {
       method: 'GET',
@@ -16,23 +17,30 @@ const  UsersContainer = () => {
   };
 
   useEffect(() => {
-    fetch("/api/visitor", options)
-    .then(res => {
-      if(res.ok)
-      console.log(res)
+    function getData() {
+      fetch("/api/visitor", options)
+      .then(res => {
+        if(res.ok)
+        console.log(res)
         return res.json()
-    })
-    .then((res) => {
+      })
+      .then((res) => {
+        // console.log(res);
+        setData(res);
+        setRefresh(false);
+      })
+    }
+    getData()
 
-      // console.log(res);
+    if (refresh){
+      getData()
+    }
 
-      setData(res);
-    })
-  }, []);
+  }, [refresh]);
 
 
   return (
-    <Users data={data}/>
+    <Users setRefresh={setRefresh} data={data}/>
   )
 
 }

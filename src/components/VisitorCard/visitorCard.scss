@@ -3,6 +3,7 @@
   max-height: calc(100vh - 260px);
   padding: 0 2px 20px 2px;
   border-radius: 20px;
+  margin-top: 20px;
 
   .visitor {
     position: relative;
@@ -23,7 +24,7 @@
     &:hover{
       color: white;
       background-color: #2070af;
-      // cursor: pointer;
+      cursor: pointer;
       -o-transition:.5s;
       -ms-transition:.5s;
       -moz-transition:.5s;
@@ -39,17 +40,45 @@
       width: 180px;
     }
     .secteur {
+      width: 180px;
       font-weight: 500;
     }
     .status {
-      right: 50px;
-      position: absolute;
       background: #4bbb6d;
       color: #fff;
       padding: 2px 15px;
       border-radius: 12px;
       font-size: 14px;
       font-weight: normal;
+    }
+
+    &-edit {
+      z-index: 999;
+      right: 10px;
+      position: absolute;
+      color: #fff;
+      padding: 2px 15px;
+      &_btn{
+        border: none;
+        border-radius: 5px;
+        margin-left: 10px;
+        cursor: pointer;
+      }
+      .edit{
+        background-color:#709ea5;
+        .icon-pen{
+          width: 17px;
+          height: auto;
+          color: white;
+          padding: 3px 0;
+        }
+      }
+      .delete{
+        background-color: #c14141;
+        .icon-trash{
+          padding: 2px 0;
+        }
+      }
     }
   }
 }

@@ -5,7 +5,7 @@ import Carte from "../../components/VisitorCard/VisitorCard";
 import Modal from "../../components/ModalUser/ModalUser";
 
 
-const Users = ({data, res}) => {
+const Users = ({data, res, setRefresh}) => {
 
   const [showPopup, setShowPopup] = useState(false);
 
@@ -25,7 +25,7 @@ const Users = ({data, res}) => {
       <div className="visitorCard">
           {(data && data.length) && data.map((v, index) => (
             <div onClick={() => setShowPopup(!showPopup)} key={index}>
-              <Carte data= {data} v={v}/>
+              <Carte data= {data} v={v} setRefresh={setRefresh}/>
           </div>
         ))}
         </div>
