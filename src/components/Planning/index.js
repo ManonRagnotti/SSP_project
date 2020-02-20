@@ -32,7 +32,7 @@ const LeftSide = ({ res}) => {
 
 
     return (
-        <div className="leftSide">
+        <div className="leftSide" id="external-events">
             <div className="calendar">
                 <Calendar fullscreen={false} />
             </div>
@@ -74,7 +74,7 @@ const LeftSide = ({ res}) => {
                     </Panel>
                 </Collapse>
             </div>
-            <div className="container">
+            <div className="container" >
                 <Collapse expandIconPosition="right" bordered={false} className="replace" defaultActiveKey={['1']}>
                     <Panel header="À replacer" key="1">
                         <CardDroppable />
