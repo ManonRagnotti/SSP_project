@@ -16,7 +16,7 @@ const  CarsContainer = () => {
 
   useEffect(() => {
     function getData() {
-      fetch("http://localhost:3000/car", options)
+      fetch("/api/car", options)
       .then(res => {
         if(res.ok)
         return res.json()
