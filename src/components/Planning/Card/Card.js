@@ -46,8 +46,8 @@ const CardDroppable = ({res}) => {
         }
       })
       setData(filteredArr);
-      // eslint-disable-next-line react-hooks/exhaustive-deps,
     })
+    // eslint-disable-next-line react-hooks/exhaustive-deps,
   }, []);
 
   let randomHotel = Math.floor(Math.random() * 10);
@@ -60,7 +60,7 @@ const CardDroppable = ({res}) => {
   }
 
   return (<div className="card">
-    <Card className="fc-event" hotelName="hotelName" score="score">
+    <Card className="fc-event">
       {
         (data && data.length)
           ? (<div className="infoHotel">
