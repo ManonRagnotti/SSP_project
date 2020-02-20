@@ -7,13 +7,13 @@ const CardDroppable = ({res}) => {
 
   const [data, setData] = useState([])
 
-  const options = {
-      method: 'GET',
-      headers: {
-          'Accept': 'application/json',
-          'ContentType': 'application/json'
-      },
-  };
+  // const options = {
+  //     method: 'GET',
+  //     headers: {
+  //         'Accept': 'application/json',
+  //         'ContentType': 'application/json'
+  //     },
+  // };
 
   const urls = [
     "/api/hotelScore",
@@ -29,8 +29,8 @@ const CardDroppable = ({res}) => {
     ))
     .then((res) => {
 
-      const arr1 = res[0]
-      const arr2 = res[1]
+      // const arr1 = res[0]
+      // const arr2 = res[1]
       const [ visites, hotels ] = res
 
       const filteredArr = hotels.map(hotel=>{
@@ -43,6 +43,7 @@ const CardDroppable = ({res}) => {
       })
       setData(filteredArr);
     })
+    // eslint-disable-next-line react-hooks/exhaustive-deps,
   }, []);
 
 
@@ -58,7 +59,7 @@ const CardDroppable = ({res}) => {
 
     return (
         <div className="card">
-            <Card  className="fc-event" hotelName="hotelName" score="score">
+            <Card  className="fc-event" >
               {(data && data.length) ? (
                 <div className="infoHotel">
                   <span className="name">{data[randomHotel].name}</span>

@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react';
 import Users from "./Users";
-import LeftSide from "../../components/Planning/index.js"
 
 
 const  UsersContainer = () => {
@@ -35,7 +34,7 @@ const  UsersContainer = () => {
     if (refresh){
       getData()
     }
-
+// eslint-disable-next-line react-hooks/exhaustive-deps,
   }, [refresh]);
 
 

@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './calendar.scss';
-import CardDroppable from '../Planning/Card/index';
 import Fullcalendar from '@fullcalendar/react';
-import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
-import frLocale from '@fullcalendar/core/locales/fr';
 import interactionPlugin, { Draggable } from '@fullcalendar/interaction';
 
 
@@ -37,7 +34,6 @@ export default function Calendar() {
           fetch("http://localhost:3000/event", options)
           .then(res => {
             if(res.ok)
-            console.log("XDDDDDDD",res)
             return res.json()
           })
           .then((res) => {
@@ -46,8 +42,8 @@ export default function Calendar() {
           })
         }
         getEvents()
+        // eslint-disable-next-line react-hooks/exhaustive-deps,
       }, [])
-    console.log(event);
     
     return (
         <div>

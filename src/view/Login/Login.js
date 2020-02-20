@@ -2,14 +2,12 @@ import React,{ useState } from 'react';
 import './Login.scss';
 import "antd/dist/antd.css";
 import {useHistory} from 'react-router-dom'
-import { getFileItem } from 'antd/lib/upload/utils';
 
 const Login = ({ login }) => {
   const [ email, setEmail ] = useState('')
   const [ password, setPassword ] = useState('')
   const history = useHistory()
 
-  console.log(setEmail, setPassword)
   const handleSubmit = (e)=>{
       e.preventDefault();
       login(email, password)

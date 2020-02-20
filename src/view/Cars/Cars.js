@@ -3,10 +3,11 @@ import "../Cars/Cars.scss"
 import "antd/dist/antd.css";
 
 
-const Cars = ({data, res, setRefresh}) => {
+const Cars = ({data, setRefresh}) => {
 
   //DELETE car
   const deleteData = async (_id) => {
+    // eslint-disable-next-line
     const res = await fetch('http://localhost:3000/car/' + _id, {
       method: 'DELETE'
     })

@@ -1,11 +1,10 @@
-import React, {useState} from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react';
 
 import './Hotels.scss';
 import Carte from "../../components/HotelCard/HotelCard";
 
 
-const Hotels = ({data, res, setRefresh}) => {
+const Hotels = ({data, setRefresh}) => {
 
 
     return (
