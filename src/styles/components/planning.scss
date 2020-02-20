@@ -54,6 +54,9 @@
       .ant-radio-group {
         width: 100%;
       }
+      .ant-card {
+        cursor: pointer;
+      }
       .radio-container {
         margin-bottom: 15px;
         label {
@@ -141,6 +144,7 @@
     font-weight: bold;
     padding: 20px;
     width: 70%;
+    margin: 0 auto;
 
     .ant-tabs-ink-bar {
       background-color: transparent;

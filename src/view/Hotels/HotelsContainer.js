@@ -5,6 +5,7 @@ import Hotels from "./Hotels";
 const  HotelsContainer = () => {
 
   const [data, setData] = useState([])
+  const [refresh, setRefresh]= useState(false)
 
   const options = {
       method: 'GET',
@@ -24,39 +25,48 @@ const  HotelsContainer = () => {
   useEffect(() => {
     // fetch("http://localhost:3000/hotelScore", options),
     // fetch("http://localhost:3000/hotel", options)
-    Promise.all(urls.map(url =>
-      fetch(url)
-      .then(res => {
-        if(res.ok)
-        return res.json()
+    function getData(){
+      Promise.all(urls.map(url =>
+        fetch(url)
+        .then(res => {
+          if(res.ok)
+          return res.json()
+        })
+      ))
+      .then((res) => {
+
+        const arr1 = res[0]
+        const arr2 = res[1]
+        const [ visites, hotels ] = res
+
+      const filteredArr = hotels.map(hotel=>{
+          const hotelVisites = visites.filter(visite => visite.idHotel === hotel.uid).sort((a,b)=> a.dateVisit- b.dateVisit)
+          const visiteAndRate = {
+            visite: hotelVisites.length ? hotelVisites[hotelVisites.length - 1].dateVisit :"",
+             score: hotelVisites.length ? hotelVisites[hotelVisites.length - 1].score :""
+          }
+          return {...hotel, ...visiteAndRate}
+        })
+
+        console.log(filteredArr)
+        //
+        // console.log(res)
+
+        setData(filteredArr);
+        setRefresh(false);
       })
-    ))
-    .then((res) => {
+    }
+    getData()
 
-      const arr1 = res[0]
-      const arr2 = res[1]
-      const [ visites, hotels ] = res
+    if (refresh){
+      getData()
+    }
 
-    const filteredArr = hotels.map(hotel=>{
-        const hotelVisites = visites.filter(visite => visite.idHotel === hotel.uid).sort((a,b)=> a.dateVisit- b.dateVisit)
-        const visiteAndRate = {
-          visite: hotelVisites.length ? hotelVisites[hotelVisites.length - 1].dateVisit :"",
-           score: hotelVisites.length ? hotelVisites[hotelVisites.length - 1].score :""
-        }
-        return {...hotel, ...visiteAndRate}
-      })
-
-      // console.log(filteredArr)
-      //
-      // console.log(res)
-
-      setData(filteredArr);
-    })
-  }, []);
+  }, [refresh]);
 
 
   return (
-    <Hotels data={data}/>
+    <Hotels setRefresh={setRefresh} data={data}/>
   )
 
 }
