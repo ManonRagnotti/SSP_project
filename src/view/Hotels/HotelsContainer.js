@@ -10,13 +10,13 @@ const HotelsContainer = () => {
   const [data, setData] = useState([])
   const [refresh, setRefresh] = useState(false)
 
-  const options = {
-    method: 'GET',
-    headers: {
-      'Accept': 'application/json',
-      'ContentType': 'text/plain'
-    }
-  };
+  // const options = {
+  //     method: 'GET',
+  //     headers: {
+  //         'Accept': 'application/json',
+  //         'ContentType': 'text/plain'
+  //     },
+  // };
 
   const urls = ["/api/hotelScore", "/api/hotel"];
 
@@ -27,8 +27,8 @@ const HotelsContainer = () => {
           return res.json()
       }))).then((res) => {
 
-        const arr1 = res[0]
-        const arr2 = res[1]
+        // const arr1 = res[0]
+        // const arr2 = res[1]
         const [visites, hotels] = res
 
         const filteredArr = hotels.map(hotel => {
@@ -47,7 +47,7 @@ const HotelsContainer = () => {
           }
         })
 
-        console.log(filteredArr)
+        // console.log(filteredArr)
         // console.log(res)
 
         setData(filteredArr);
@@ -59,7 +59,7 @@ const HotelsContainer = () => {
     if (refresh) {
       getData()
     }
-
+    // eslint-disable-next-line react-hooks/exhaustive-deps,
   }, [refresh]);
 
   return (<Hotels setRefresh={setRefresh} data={data}/>)

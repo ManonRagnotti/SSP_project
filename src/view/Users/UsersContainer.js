@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react';
 import Users from "./Users";
-import LeftSide from "../../components/Planning/Planning.js"
 
 const UsersContainer = () => {
 
@@ -23,10 +22,8 @@ const UsersContainer = () => {
     function getData() {
       fetch("/api/visitor", options).then(res => {
         if (res.ok)
-          console.log(res)
         return res.json()
       }).then((res) => {
-        // console.log(res);
         setData(res);
         setRefresh(false);
       })
@@ -36,7 +33,7 @@ const UsersContainer = () => {
     if (refresh) {
       getData()
     }
-
+    // eslint-disable-next-line react-hooks/exhaustive-deps,
   }, [refresh]);
 
   return (<Users setRefresh={setRefresh} data={data}/>)

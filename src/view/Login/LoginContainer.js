@@ -1,9 +1,7 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Login from "./Login";
 
 const LoginContainer = () => {
-
-  const [logged, setLogged] = useState(false);
 
   const login = (email, password) => {
     fetch("http://localhost:3000/user/login", {
