@@ -30,7 +30,7 @@ const LeftSide = ({ res}) => {
     })
   }, []);
 
-  
+
     return (
         <div className="leftSide">
             <div className="calendar">
@@ -43,20 +43,23 @@ const LeftSide = ({ res}) => {
                             <div className="radio-container">
                                 <Radio value={1}>Binome 1</Radio>
                                 <div className="radio-content" draggable={true}>
-                                    Vanessa Salarié 5
                                     {(data && data.length) && data.slice(0,2).map((v, index) => (
-                                      <span className="lastName">{v.lastName}</span>
+                                      <div className="identity">
+                                        <span className="lastName">{v.lastName}</span>&#160;<span className="name">{v.name}</span>
+                                        <Icon type="close"/>
+                                      </div>
                                   ))}
-                                    <Icon type="close"/>
                                 </div>
                             </div>
                             <div className="radio-container">
                                 <Radio value={2}>Binome 2</Radio>
                                 <div className="radio-content" draggable={true}>
                                   {(data && data.length) && data.slice(2,4).map((v, index) => (
-                                    <span className="lastName">{v.lastName}</span>
+                                    <div className="identity">
+                                      <span className="lastName">{v.lastName}</span>&#160;<span className="name">{v.name}</span>
+                                      <Icon type="close"/>
+                                    </div>
                                 ))}
-                                  <Icon type="close"/>
                                 </div>
                             </div>
                         </Radio.Group>
@@ -66,8 +69,6 @@ const LeftSide = ({ res}) => {
             <div className="container">
                 <Collapse expandIconPosition="right" bordered={false} className="urgency" defaultActiveKey={['1']}>
                     <Panel header="Urgences" key="1">
-                        <CardDroppable />
-                        <CardDroppable />
                         <CardDroppable />
                         <CardDroppable />
                     </Panel>
@@ -89,7 +90,7 @@ const LeftSide = ({ res}) => {
                     </Panel>
                 </Collapse>
             </div>
-        </div >
+        </div>
     )
 }
 const Planning = () => {

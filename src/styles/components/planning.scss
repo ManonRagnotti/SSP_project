@@ -51,7 +51,9 @@
         margin-top: 10px;
         font-size: 16px;
       }
-
+      .ant-radio-group {
+        width: 100%;
+      }
       .radio-container {
         margin-bottom: 15px;
         label {
@@ -67,6 +69,13 @@
           color: #000000;
           &:hover {
             color: $light-grey;
+          }
+          .identity {
+            position: relative;
+            .anticon-close {
+              position: absolute;
+              right: 0;
+            }
           }
           i {
             float: right;
