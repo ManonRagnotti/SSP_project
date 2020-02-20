@@ -3,15 +3,16 @@
   font-family: Montserrat;
   background-color: #ffffff;
 
-  &-container{
+  &-container {
     display: flex;
     justify-content: space-between;
     max-width: calc(100% - 4rem);
     margin: 0 auto;
     align-items: center;
   }
-  &-icon{
-    &-mainLogo{
+
+  &-icon {
+    &-mainLogo {
       width: 250px;
       height: 21px;
     }
@@ -53,5 +54,4 @@
   &-userRoles {
     font-weight: 300;
   }
-
 }

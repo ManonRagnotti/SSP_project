@@ -11,60 +11,69 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    margin: 0 2px 20px 2px ;
-    &:hover{
+    margin: 0 2px 20px;
+
+    &:hover {
       color: white;
       background-color: #2070af;
-      // cursor: pointer;
-      -o-transition:.5s;
-      -ms-transition:.5s;
-      -moz-transition:.5s;
-      -webkit-transition:.5s;
+      -o-transition: 0.5s;
+      -ms-transition: 0.5s;
+      -moz-transition: 0.5s;
+      -webkit-transition: 0.5s;
       /* ...and now for the proper property */
-      transition:.5s;
+      transition: 0.5s;
     }
+
     li {
       list-style: none;
+
       &.name {
         width: 30%;
       }
+
       &.address {
         width: 30%;
       }
+
       &.score {
         width: 15%;
       }
+
       &.visite {
         width: 18%;
       }
     }
+
     &-edit {
-      right: 0px;
+      right: 0;
       position: absolute;
       color: #fff;
       padding: 2px 15px;
-      &_btn{
-          border: none;
-          border-radius: 5px;
-          margin-left: 10px;
-          cursor: pointer;
-      }
-      .edit{
-          background-color:#709ea5;
-          .icon-pen{
-            width: 17px;
-            height: auto;
-            padding: 3px 0;
 
-          }
+      &_btn {
+        border: none;
+        border-radius: 5px;
+        margin-left: 10px;
+        cursor: pointer;
       }
-      .delete{
-          background-color: #c14141;
-          .icon-trash{
-            padding: 2px 0;
-          }
+
+      .edit {
+        background-color: #709ea5;
+
+        .icon-pen {
+          width: 17px;
+          height: auto;
+          padding: 3px 0;
+        }
+      }
+
+      .delete {
+        background-color: #c14141;
+
+        .icon-trash {
+          padding: 2px 0;
+        }
       }
     }
   }
-
 }

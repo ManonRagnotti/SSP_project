@@ -1,39 +1,42 @@
 @import '~@fullcalendar/core/main.css';
 @import '~@fullcalendar/daygrid/main.css';
 @import '~@fullcalendar/timegrid/main.css';
-.fc-button{
-    background-color: #fff;
-    color: #787878;
-    border: none;
+
+.fc-button {
+  background-color: #fff;
+  color: #787878;
+  border: none;
 }
 
-.fc-view-container{
-    background-color: #fcfcfd;
+.fc-view-container {
+  background-color: #fcfcfd;
+  border-radius: 12px;
+
+  thead {
+    border-color: #dfe0eb;
     border-radius: 12px;
+    th {
+      padding: 10px;
+      color: #787878;
+      span {
+        text-transform: uppercase;
+      }
+    }
+  }
 
-    thead {
-        border-color:#dfe0eb ;
-        border-radius: 12px;
+  tbody {
+    border-color: #dfe0eb;
+    td.fc-axis.fc-time.fc-widget-content {
+      background-color: #f1f2fa;
+      border: none;
+    }
+  }
 
-        th{
-            padding: 10px;
-            color: #787878;
-            span{
-                text-transform: uppercase;
-            }
-        }
-    }
-    tbody{
-        border-color:#dfe0eb;
-        td.fc-axis.fc-time.fc-widget-content{
-            background-color: #f1f2fa;
-            border: none;
-        }
-    }
-    .fc-head-container{
-        border: none;
-    }
+  .fc-head-container {
+    border: none;
+  }
 }
-.fc-scroller.fc-time-grid-container{
-    max-height: 333px !important;
+
+.fc-scroller.fc-time-grid-container {
+  max-height: 333px !important;
 }
