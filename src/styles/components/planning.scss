@@ -4,64 +4,78 @@
 .planningContainer {
   background-color: $purple-light;
   display: flex;
+
   .title {
     font-weight: bold;
     font-size: 20px;
     color: black;
   }
+
   .leftSide {
     padding: 20px;
     min-width: 340px;
     display: grid;
-    background-color: white;
-    // margin-right: auto;
+    background-color: #ffffff;
     overflow: scroll;
     height: calc(100vh - 60px);
+
     .ant-collapse-item {
       border: none;
       color: black;
       font-weight: bold;
       font-size: 21px;
+
       .ant-collapse-header {
         max-width: 320px;
         padding: 12px 0;
       }
     }
+
     .calendar {
       background-color: white;
       width: 280px;
+
       .ant-fullcalendar-selected-day .ant-fullcalendar-value {
         background-color: $darkblue;
         color: white;
       }
     }
+
     .container {
       background-color: #ffffff;
       padding: 10px 5px;
+
       .ant-collapse-borderless {
         background: #ffffff;
       }
+
       .ant-collapse-header {
         font-family: Montserrat;
         font-size: 14px;
         font-weight: 600;
         color: #000000;
       }
+
       .visitorName {
         margin-top: 10px;
         font-size: 16px;
       }
+
       .ant-radio-group {
         width: 100%;
       }
+
       .ant-card {
         cursor: pointer;
       }
+
       .radio-container {
         margin-bottom: 15px;
+
         label {
           font-size: 16px;
         }
+
         .radio-content {
           padding: 5px;
           margin-left: 10px;
@@ -70,68 +84,81 @@
           font-weight: normal;
           font-size: 14px;
           color: #000000;
+
           &:hover {
             color: $light-grey;
           }
+
           .identity {
             position: relative;
+
             .anticon-close {
               position: absolute;
               right: 0;
             }
           }
+
           i {
             float: right;
             padding: 2px;
-            &:hover{
+
+            &:hover {
               color: red;
             }
           }
         }
       }
+
       .urgency {
         .card {
           .ant-card {
             @include card;
             background-color: $purple-red;
+
             .ant-card-body {
               padding: 10px;
               margin: auto;
             }
           }
+
           &:hover {
             opacity: 0.5;
           }
         }
       }
+
       .replace {
         .card {
           .ant-card {
             @include card;
             width: 90%;
-            // background-color: $green-pastel;
             background: #4390CC;
+
             .ant-card-body {
               padding: 10px;
               margin: auto;
             }
           }
+
           &:hover {
             opacity: 0.5;
           }
         }
       }
+
       .suggest {
         .card {
           .ant-card {
             @include card;
             width: 90%;
             background-color: #F5D547;
+
             .ant-card-body {
               padding: 10px;
               margin: auto;
             }
           }
+
           &:hover {
             opacity: 0.5;
           }
@@ -139,6 +166,7 @@
       }
     }
   }
+
   .pages-button {
     font-size: 16px;
     font-weight: bold;
@@ -149,9 +177,11 @@
     .ant-tabs-ink-bar {
       background-color: transparent;
     }
+
     .ant-tabs-bar {
       border: none;
     }
+
     .ant-tabs-tab {
       background-color: #fcfcfd;
       border-radius: 12px;
@@ -162,28 +192,30 @@
       font-size: 16px;
       font-weight: 500;
       color: #787878;
+
       &:hover {
         color: white;
         background-color: #2070af;
         cursor: pointer;
-        -o-transition:.5s;
-        -ms-transition:.5s;
-        -moz-transition:.5s;
-        -webkit-transition:.5s;
+        -o-transition: 0.5s;
+        -ms-transition: 0.5s;
+        -moz-transition: 0.5s;
+        -webkit-transition: 0.5s;
         /* ...and now for the proper property */
-        transition:.5s;
+        transition: 0.5s;
       }
     }
+
     .ant-tabs-tab-active {
       color: white;
       background-color: #2070af;
       cursor: pointer;
-      -o-transition:.5s;
-      -ms-transition:.5s;
-      -moz-transition:.5s;
-      -webkit-transition:.5s;
+      -o-transition: 0.5s;
+      -ms-transition: 0.5s;
+      -moz-transition: 0.5s;
+      -webkit-transition: 0.5s;
       /* ...and now for the proper property */
-      transition:.5s;
+      transition: 0.5s;
     }
   }
 }

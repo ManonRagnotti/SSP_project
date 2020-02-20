@@ -2,18 +2,18 @@
   background-color: #f1f2fa;
   display: flex;
   flex-wrap: wrap;
-  padding: 0 0 30px 0;
+  padding: 0 0 30px;
   justify-content: center;
 
   .filter {
     display: flex;
     justify-content: center;
     margin: 0;
+
     li {
       width: 120px;
       height: 58px;
       border-radius: 12px;
-      // box-shadow: inset 0 1px 3px 0 rgba(196, 196, 196, 0.5);
       background-color: #fcfcfd;
       list-style: none;
       display: flex;
@@ -25,29 +25,28 @@
       font-weight: 500;
       color: #787878;
 
-      &:hover, &.active {
+      &.active,
+      &:hover {
         color: white;
         background-color: #2070af;
         cursor: pointer;
-        -o-transition:.5s;
-        -ms-transition:.5s;
-        -moz-transition:.5s;
-        -webkit-transition:.5s;
+        -o-transition: 0.5s;
+        -ms-transition: 0.5s;
+        -moz-transition: 0.5s;
+        -webkit-transition: 0.5s;
         /* ...and now for the proper property */
-        transition:.5s;
+        transition: 0.5s;
       }
     }
   }
 
   .visitorsContainer {
     width: 90%;
-    // height: auto;
     height: calc(100vh - 180px);
     border-radius: 35px;
     background-color: #fcfcfd;
     overflow: hidden;
     padding: 20px 40px;
-
     margin: auto;
     position: relative;
 
@@ -59,10 +58,6 @@
       font-family: Montserrat;
       font-size: 12px;
       font-weight: 600;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: normal;
-      letter-spacing: normal;
       color: #ffffff;
       position: absolute;
       top: 25px;
@@ -75,12 +70,7 @@
       font-family: Montserrat;
       font-size: 20px;
       font-weight: 600;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: normal;
-      letter-spacing: normal;
       color: #000000;
     }
-
   }
 }

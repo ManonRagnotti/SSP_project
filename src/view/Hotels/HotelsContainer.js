@@ -1,11 +1,14 @@
 import React, {useState, useEffect} from 'react';
 import Hotels from "./Hotels";
 
+const HotelsContainer = () => {
 
-const  HotelsContainer = () => {
+  /*
+  * hotels: fetch API data from the two hotel tables and bring them together in one table for retrieve hotel data
+  */
 
   const [data, setData] = useState([])
-  const [refresh, setRefresh]= useState(false)
+  const [refresh, setRefresh] = useState(false)
 
   // const options = {
   //     method: 'GET',
@@ -15,40 +18,36 @@ const  HotelsContainer = () => {
   //     },
   // };
 
-  const urls = [
-    "/api/hotelScore",
-    "/api/hotel"
-  ];
-
-
+  const urls = ["/api/hotelScore", "/api/hotel"];
 
   useEffect(() => {
-    // fetch("http://localhost:3000/hotelScore", options),
-    // fetch("http://localhost:3000/hotel", options)
-    function getData(){
-      Promise.all(urls.map(url =>
-        fetch(url)
-        .then(res => {
-          if(res.ok)
+    function getData() {
+      Promise.all(urls.map(url => fetch(url).then(res => {
+        if (res.ok)
           return res.json()
-        })
-      ))
-      .then((res) => {
+      }))).then((res) => {
 
         // const arr1 = res[0]
         // const arr2 = res[1]
-        const [ visites, hotels ] = res
+        const [visites, hotels] = res
 
-        const filteredArr = hotels.map(hotel=>{
-          const hotelVisites = visites.filter(visite => visite.idHotel === hotel.uid).sort((a,b)=> a.dateVisit- b.dateVisit)
+        const filteredArr = hotels.map(hotel => {
+          const hotelVisites = visites.filter(visite => visite.idHotel === hotel.uid).sort((a, b) => a.dateVisit - b.dateVisit)
           const visiteAndRate = {
-            visite: hotelVisites.length ? hotelVisites[hotelVisites.length - 1].dateVisit :"",
-             score: hotelVisites.length ? hotelVisites[hotelVisites.length - 1].score :""
+            visite: hotelVisites.length
+              ? hotelVisites[hotelVisites.length - 1].dateVisit
+              : "",
+            score: hotelVisites.length
+              ? hotelVisites[hotelVisites.length - 1].score
+              : ""
           }
-          return {...hotel, ...visiteAndRate}
+          return {
+            ...hotel,
+            ...visiteAndRate
+          }
         })
 
-        console.log(filteredArr)
+        // console.log(filteredArr)
         // console.log(res)
 
         setData(filteredArr);
@@ -57,16 +56,13 @@ const  HotelsContainer = () => {
     }
     getData()
 
-    if (refresh){
+    if (refresh) {
       getData()
     }
-// eslint-disable-next-line react-hooks/exhaustive-deps,
+    // eslint-disable-next-line react-hooks/exhaustive-deps,
   }, [refresh]);
 
-
-  return (
-    <Hotels setRefresh={setRefresh} data={data}/>
-  )
+  return (<Hotels setRefresh={setRefresh} data={data}/>)
 
 }
 
