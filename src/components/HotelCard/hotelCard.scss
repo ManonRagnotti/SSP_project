@@ -1,9 +1,10 @@
 .hotelcard {
-  max-height: 430px;
+  max-height: calc(100vh - 340px);
   overflow-y: scroll;
 
   .hotelInfo {
-    height: 67px;
+    position: relative;
+    min-height: 67px;
     border-radius: 20px;
     box-shadow: 0 2px 4px 0 rgba(129, 129, 129, 0.5);
     background-color: #fcfcfd;
@@ -11,6 +12,17 @@
     justify-content: flex-start;
     align-items: center;
     margin: 0 2px 20px 2px ;
+    &:hover{
+      color: white;
+      background-color: #2070af;
+      // cursor: pointer;
+      -o-transition:.5s;
+      -ms-transition:.5s;
+      -moz-transition:.5s;
+      -webkit-transition:.5s;
+      /* ...and now for the proper property */
+      transition:.5s;
+    }
     li {
       list-style: none;
       &.name {
@@ -20,14 +32,14 @@
         width: 30%;
       }
       &.score {
-        width: 20%;
+        width: 15%;
       }
       &.visite {
         width: 18%;
       }
     }
     &-edit {
-      right: 50px;
+      right: 0px;
       position: absolute;
       color: #fff;
       padding: 2px 15px;
@@ -35,6 +47,7 @@
           border: none;
           border-radius: 5px;
           margin-left: 10px;
+          cursor: pointer;
       }
       .edit{
           background-color:#709ea5;
@@ -53,6 +66,5 @@
       }
     }
   }
-  
-}
 
+}

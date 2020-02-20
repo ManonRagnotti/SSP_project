@@ -6,6 +6,7 @@ export default ( {data, v} ) => {
     <div className="visitor">
       <span className="lastName">{v.lastName}</span>
       <span className="name">{v.name}</span>
+      <span className="secteur"> Secteur {v.area}</span>
       <span className="status"> Disponible</span>
     </div>
   )
