@@ -22,14 +22,13 @@ const LeftSide = ({ res}) => {
     fetch("/api/visitor", options)
     .then(res => {
       if(res.ok)
-      console.log(res)
         return res.json()
     })
     .then((res) => {
       setData(res);
     })
+    // eslint-disable-next-line react-hooks/exhaustive-deps,
   }, []);
-
 
     return (
         <div className="leftSide" id="external-events">
@@ -44,7 +43,7 @@ const LeftSide = ({ res}) => {
                                 <Radio value={1}>Binome 1</Radio>
                                 <div className="radio-content" draggable={true}>
                                     {(data && data.length) && data.slice(0,2).map((v, index) => (
-                                      <div className="identity">
+                                      <div key={index} className="identity">
                                         <span className="lastName">{v.lastName}</span>&#160;<span className="name">{v.name}</span>
                                         <Icon type="close"/>
                                       </div>
@@ -55,7 +54,7 @@ const LeftSide = ({ res}) => {
                                 <Radio value={2}>Binome 2</Radio>
                                 <div className="radio-content" draggable={true}>
                                   {(data && data.length) && data.slice(2,4).map((v, index) => (
-                                    <div className="identity">
+                                    <div key={index} className="identity">
                                       <span className="lastName">{v.lastName}</span>&#160;<span className="name">{v.name}</span>
                                       <Icon type="close"/>
                                     </div>

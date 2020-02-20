@@ -1,10 +1,11 @@
 import React from 'react';
 import './visitorCard.scss';
 
-export default ( {data, v, setRefresh} ) => {
+export default ( { v, setRefresh} ) => {
 
   //DELETE visitor
   const deleteData = async (_id) => {
+    // eslint-disable-next-line 
     const res = await fetch('/api/visitor/' + _id, {
       method: 'DELETE'
     })

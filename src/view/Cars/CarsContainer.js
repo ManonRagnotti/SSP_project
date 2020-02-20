@@ -3,7 +3,7 @@ import Cars from "./Cars";
 
 const  CarsContainer = () => {
 
-  const [data, setData, list, setList] = useState([])
+  const [data, setData] = useState([])
   const [refresh, setRefresh]= useState(false)
 
   const options = {
@@ -32,7 +32,7 @@ const  CarsContainer = () => {
     if (refresh){
       getData()
     }
-
+// eslint-disable-next-line react-hooks/exhaustive-deps,
   }, [refresh]);
 
 

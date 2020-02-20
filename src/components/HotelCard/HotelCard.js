@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './hotelCard.scss';
 
 export default ( {data, setRefresh} ) => {
 
   //DELETE hotel
   const deleteData = async (_id) => {
+    // eslint-disable-next-line
     const res = await fetch('/api/hotel/' + _id, {
       method: 'DELETE'
     })
