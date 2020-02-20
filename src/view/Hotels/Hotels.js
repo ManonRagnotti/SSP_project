@@ -5,7 +5,7 @@ import './Hotels.scss';
 import Carte from "../../components/HotelCard/HotelCard";
 
 
-const Hotels = ({data, res}) => {
+const Hotels = ({data, res, setRefresh}) => {
 
 
     return (
@@ -31,7 +31,7 @@ const Hotels = ({data, res}) => {
             </ul>
           </div>
 
-          <Carte data={data} />
+          <Carte data={data} setRefresh={setRefresh} />
 
         </div>
 

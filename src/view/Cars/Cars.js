@@ -15,9 +15,9 @@ const Cars = ({data, res, handleRemoveItem}) => {
           {
             (data && data.length)
             && data.map (
-              c => {
+              (c, index) => {
                 return (
-                  <div className="cars-items">
+                  <div className="cars-items" key={index}>
                     <span className="cars-items_type">{c.carType}</span>
                     <span className="cars-items_registration">{c.registration}</span>
                     <div className="cars-edit">

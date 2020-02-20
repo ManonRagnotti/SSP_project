@@ -1,18 +1,35 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './hotelCard.scss';
 
-export default ( {data} ) => {
+export default ( {data, setRefresh} ) => {
 
 
+  //DELETE hotel
+  const urls = [
+    "http://localhost:3000/hotelScore",
+    "http://localhost:3000/hotel"
+  ];
+
+  const deleteData = async (_id) => {
+    // return fetch('http://localhost:3000/hotel/' + _id, {
+    //   method: 'DELETE'
+    // })
+    // .then(res => res.status)
+    // .then(res => setRefresh(true))
+    const res = await fetch('http://localhost:3000/hotel/' + _id, {
+      method: 'DELETE'
+    })
+  await setRefresh(true)
+  }
 
   return (
     <div className="hotelcard">
         {
           (data && data.length)
           && data.map (
-            h => {
+            (h,index) => {
               return (
-                <ul className="hotelInfo">
+                <ul className="hotelInfo" key={index}>
                   <li className="name">{h.name}</li>
                   <li className="address">{h.address}</li>
                   <li className="score">{h.visite? h.score: ""}</li>
@@ -21,7 +38,7 @@ export default ( {data} ) => {
                     <button className="hotelInfo-edit_btn edit">
                       <img alt="" className="icon-pen" src={require('../../assets/img/pen.svg')}></img>
                     </button>
-                    <button className="hotelInfo-edit_btn delete">
+                    <button className="hotelInfo-edit_btn delete" onClick={() => deleteData(h._id)}>
                       <img alt="" className="icon-trash" src={require('../../assets/img/trash.svg')}></img>
                     </button>
                   </div>
