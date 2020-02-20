@@ -3,7 +3,15 @@ import "../Cars/Cars.scss"
 import "antd/dist/antd.css";
 
 
-const Cars = ({data, res, handleRemoveItem}) => {
+const Cars = ({data, res, setRefresh}) => {
+
+  //DELETE car
+  const deleteData = async (_id) => {
+    const res = await fetch('http://localhost:3000/car/' + _id, {
+      method: 'DELETE'
+    })
+  await setRefresh(true)
+  }
 
   return(
     <div className="cars">
@@ -24,7 +32,7 @@ const Cars = ({data, res, handleRemoveItem}) => {
                       <button className="cars-edit_btn edit">
                         <img alt="" className="icon-pen" src={require('../../assets/img/pen.svg')}></img>
                       </button>
-                      <button className="cars-edit_btn delete" onClick={() => handleRemoveItem()}>
+                      <button className="cars-edit_btn delete" onClick={() => deleteData(c._id)}>
                         <img alt="" className="icon-trash" src={require('../../assets/img/trash.svg')}></img>
                       </button>
                     </div>

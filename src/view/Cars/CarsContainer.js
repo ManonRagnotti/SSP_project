@@ -4,13 +4,7 @@ import Cars from "./Cars";
 const  CarsContainer = () => {
 
   const [data, setData, list, setList] = useState([])
-  
-  const handleRemoveItem = (e) => {
-    console.log('hello');
-    
-    const name = e.target.value;
-     setList(list.filter((e)=>(e !== name)));
-   };
+  const [refresh, setRefresh]= useState(false)
 
   const options = {
       method: 'GET',
@@ -21,22 +15,29 @@ const  CarsContainer = () => {
   };
 
   useEffect(() => {
-    fetch("http://localhost:3000/car", options)
-    .then(res => {
-      if(res.ok)
+    function getData() {
+      fetch("http://localhost:3000/car", options)
+      .then(res => {
+        if(res.ok)
         return res.json()
-    })
-    .then((res) => {
+      })
+      .then((res) => {
+        // console.log(res);
+        setData(res);
+        setRefresh(false);
+      })
+    }
+    getData()
 
-      // console.log(res);
+    if (refresh){
+      getData()
+    }
 
-      setData(res);
-    })
-  }, [options]);
+  }, [refresh]);
 
 
   return (
-    <Cars data={data} handleRemoveItem={handleRemoveItem}/>
+    <Cars setRefresh={setRefresh} data={data} />
   )
 
 }
