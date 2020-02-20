@@ -5,8 +5,8 @@ import "../../../styles/components/planning.scss"
 
 const CardDroppable = () => {
     return (
-        <div className="card">
-            <Card draggable={true}>
+        <div className="card external-events">
+            <Card draggable={true} className="fc-event" title="titre" data="1">
                 Card content skjfkjsb fskjgdk fksdjnfkdsj fksdjnf
                 {/* CONDITION IF URGENT */}
                 {/* SINON AFFICHER NOTE */}
