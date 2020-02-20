@@ -14,7 +14,7 @@
     min-width: 340px;
     display: grid;
     background-color: white;
-    margin-right: auto;
+    // margin-right: auto;
     overflow: scroll;
     height: calc(100vh - 60px);
     .ant-collapse-item {
@@ -149,22 +149,37 @@
       border: none;
     }
     .ant-tabs-tab {
-      background-color: white;
+      background-color: #fcfcfd;
       border-radius: 12px;
       min-width: 120px;
       text-align: center;
-      margin-right: 30px;
-      color: $light-grey;
+      margin: 20px 15px;
+      font-family: Montserrat;
+      font-size: 16px;
+      font-weight: 500;
+      color: #787878;
       &:hover {
         color: white;
-        background-color: $darkblue;
-        opacity: 0.5;
+        background-color: #2070af;
+        cursor: pointer;
+        -o-transition:.5s;
+        -ms-transition:.5s;
+        -moz-transition:.5s;
+        -webkit-transition:.5s;
+        /* ...and now for the proper property */
+        transition:.5s;
       }
     }
     .ant-tabs-tab-active {
-      font-weight: bold;
       color: white;
-      background-color: $darkblue;
+      background-color: #2070af;
+      cursor: pointer;
+      -o-transition:.5s;
+      -ms-transition:.5s;
+      -moz-transition:.5s;
+      -webkit-transition:.5s;
+      /* ...and now for the proper property */
+      transition:.5s;
     }
   }
 }
