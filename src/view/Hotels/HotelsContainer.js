@@ -16,8 +16,8 @@ const  HotelsContainer = () => {
   };
 
   const urls = [
-    "http://localhost:3000/hotelScore",
-    "http://localhost:3000/hotel"
+    "/api/hotelScore",
+    "/api/hotel"
   ];
 
 
@@ -39,7 +39,7 @@ const  HotelsContainer = () => {
         const arr2 = res[1]
         const [ visites, hotels ] = res
 
-      const filteredArr = hotels.map(hotel=>{
+        const filteredArr = hotels.map(hotel=>{
           const hotelVisites = visites.filter(visite => visite.idHotel === hotel.uid).sort((a,b)=> a.dateVisit- b.dateVisit)
           const visiteAndRate = {
             visite: hotelVisites.length ? hotelVisites[hotelVisites.length - 1].dateVisit :"",
@@ -49,7 +49,6 @@ const  HotelsContainer = () => {
         })
 
         console.log(filteredArr)
-        //
         // console.log(res)
 
         setData(filteredArr);

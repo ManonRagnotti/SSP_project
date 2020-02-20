@@ -16,8 +16,8 @@ const CardDroppable = ({res}) => {
   };
 
   const urls = [
-    "http://localhost:3000/hotelScore",
-    "http://localhost:3000/hotel"
+    "/api/hotelScore",
+    "/api/hotel"
   ];
   useEffect(() => {
     Promise.all(urls.map(url =>
@@ -69,8 +69,6 @@ const CardDroppable = ({res}) => {
                   </div>
                 </div>
             ): null}
-                {/* CONDITION IF URGENT */}
-                {/* SINON AFFICHER NOTE */}
             </Card>
         </div>
     );
