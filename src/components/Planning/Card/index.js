@@ -45,7 +45,6 @@ const CardDroppable = ({res}) => {
     })
   }, []);
 
-  console.log(data);
 
   let randomHotel = Math.floor(Math.random() * 10);
 

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './calendar.scss';
 import CardDroppable from '../Planning/Card/index';
 import Fullcalendar from '@fullcalendar/react';
@@ -8,8 +8,17 @@ import frLocale from '@fullcalendar/core/locales/fr';
 import interactionPlugin, { Draggable } from '@fullcalendar/interaction';
 
 
-
 export default function Calendar() {
+   
+    const [event, setEvent] = useState([])
+
+    const options = {
+      method: 'GET',
+      headers: {
+          'Accept': 'application/json',
+          'ContentType': 'application/json'
+      },
+  };
 
     useEffect(() => {
         let draggableEl = document.getElementById("external-events");
@@ -24,9 +33,23 @@ export default function Calendar() {
               };
             }
           })
+        function getEvents() {
+          fetch("http://localhost:3000/event", options)
+          .then(res => {
+            if(res.ok)
+            console.log("XDDDDDDD",res)
+            return res.json()
+          })
+          .then((res) => {
+            // console.log(res);
+            setEvent(res);
+          })
+        }
+        getEvents()
       }, [])
-
-    return(
+    console.log(event);
+    
+    return (
         <div>
         <Fullcalendar 
             defaultView="timeGridWeek"
@@ -34,9 +57,8 @@ export default function Calendar() {
             droppable={true}
             weekends={false}
             locale="fr"
-            events={[{id: 'a',
-            title: 'hotel de saint montreuil',
-            start: '2020-02-20'}]}
+            events={event}
+            minTime="07:00:00"
         />
         </div>
     )
