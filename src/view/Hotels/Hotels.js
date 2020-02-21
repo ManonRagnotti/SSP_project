@@ -16,8 +16,9 @@ const Hotels = ({data, res,values, setValues, setRefresh}) => {
           <li>77/91</li>
         </ul>
 
-    <div className="hotelsContainer">
-      <h3>Hotels</h3>
+        <div className="hotelsContainer">
+            <div className="hotelsHeader">
+          <h3>Hotels</h3>
       <button className="addNewHotel">+ Ajouter</button>
                 <input value={hotelFilter} onChange={e=> setValues({...values,hotelFilter: e.target.value})} className="hotelsSearch" placeholder="Rechercher un hotel"></input>
                 </div>
