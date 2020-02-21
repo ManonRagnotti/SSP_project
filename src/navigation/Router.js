@@ -14,7 +14,7 @@ const Router = () => {
   return (<AppRouter>
     <div className="app">
       <Header/>
-    <Redirect from="/" to="login"/>
+      <Redirect from="/" to="login"/>
       <Switch>
         <Route path="/register">
           <RegisterContainer/>
