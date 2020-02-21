@@ -1,4 +1,4 @@
-import {BrowserRouter as AppRouter, Route, Switch} from "react-router-dom";
+import {BrowserRouter as AppRouter, Route, Switch, Redirect} from "react-router-dom";
 import React from "react";
 import RegisterContainer from "../view/Register/RegisterContainer";
 import Header from "../components/Header";
@@ -14,6 +14,7 @@ const Router = () => {
   return (<AppRouter>
     <div className="app">
       <Header/>
+    <Redirect from="/" to="login"/>
       <Switch>
         <Route path="/register">
           <RegisterContainer/>
@@ -24,7 +25,6 @@ const Router = () => {
         <Route path="/users">
           <UsersContainer/>
         </Route>
-
         <Route path="/hotels">
           <HotelsContainer/>
         </Route>
