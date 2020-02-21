@@ -48,8 +48,11 @@ Ce projet m’a permis de ma familiariser avec la syntaxe fonctionnelle et state
 
 #### Fabien Marques
 
- >- Recherche page hôtels 
- >- Infrastructure
+>Pour ma part, j'ai participé dans un premier temps à la création de la structure du projet (création des fichiers view, component, navigation, fichier scss commun), 
+à l'intégration du header et à la gestion de la navigation via react-router. J'ai ensuite intégré un input qui permet de filtrer et de retrouver un hôtel spécifique dans la longue liste d'hôtel
+(filtre par nom d'hôtel ou l'adresse). Je me suis ensuite consacré uniquement sur l'infrastructure du projet en déployant l'API et le back dans une instance EC2 avec terraform.
+C'était une première pour moi, j'y ai consacré beaucoup de temps mais cela m'a permis d'apprendre comment déployer du code sur une VM !
+Une fois le code déployé sur EC2, j'ai du rajouter un reverse proxy pour pouvoir faire communiquer le front et l'api ensemble car les chemins étaient écrit en dur.
 
 
 ### Liens
