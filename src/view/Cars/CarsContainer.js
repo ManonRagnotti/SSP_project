@@ -20,7 +20,7 @@ const CarsContainer = () => {
 
   useEffect(() => {
     function getData() {
-      fetch("/api/car", options).then(res => {
+      fetch("/api/cars", options).then(res => {
         if (res.ok)
           return res.json()
       }).then((res) => {

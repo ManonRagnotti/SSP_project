@@ -4,7 +4,7 @@ import Login from "./Login";
 const LoginContainer = () => {
 
   const login = (email, password) => {
-    fetch("http://localhost:3000/user/login", {
+    fetch("/api/user/login", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
