@@ -63,8 +63,17 @@ Adresse mail : admin@gmail.com
 Mot de passe: hetic2018
 
 #### Api déployée
-[API déployé](http://ec2-34-249-204-157.eu-west-1.compute.amazonaws.com:3000)
+[API déployée](http://ec2-34-249-204-157.eu-west-1.compute.amazonaws.com:3000)
 
 Repository de l'API :
 https://github.com/Mehdi-Verfaillie/samuSocial-api
+
+
+## Installation du projet
+
+```shell
+$ cd projectPath
+$ cd SSP_project
+$ npm install
+$ npm start
 
