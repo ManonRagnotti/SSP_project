@@ -20,7 +20,7 @@ const UsersContainer = () => {
 
   useEffect(() => {
     function getData() {
-      fetch("/api/visitor", options).then(res => {
+      fetch("/api/visitors", options).then(res => {
         if (res.ok)
         return res.json()
       }).then((res) => {

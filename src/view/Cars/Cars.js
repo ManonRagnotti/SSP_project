@@ -6,7 +6,7 @@ const Cars = ({data, res, setRefresh}) => {
 
   //DELETE car
   const deleteData = async (_id) => {
-    await fetch('http://localhost:3000/car/' + _id, {method: 'DELETE'})
+    await fetch('/api/cars/' + _id, {method: 'DELETE'})
     await setRefresh(true)
   }
 

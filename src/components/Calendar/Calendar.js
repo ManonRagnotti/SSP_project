@@ -27,7 +27,7 @@ export default function Calendar() {
       }
     })
     function getEvents() {
-      fetch("http://localhost:3000/event", options).then(res => {
+      fetch("/api/events", options).then(res => {
         if (res.ok)
           return res.json()
       }).then((res) => {

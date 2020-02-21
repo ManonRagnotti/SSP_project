@@ -19,7 +19,7 @@ const CardDroppable = ({res}) => {
   //   }
   // };
 
-  const urls = ["/api/hotelScore", "/api/hotel"];
+  const urls = ["/api/hotelScores", "/api/hotels"];
   useEffect(() => {
     Promise.all(urls.map(url => fetch(url).then(res => {
       if (res.ok)

@@ -18,7 +18,7 @@ const HotelsContainer = () => {
   //     },
   // };
 
-  const urls = ["/api/hotelScore", "/api/hotel"];
+  const urls = ["/api/hotelScores", "/api/hotels"];
 
   useEffect(() => {
     function getData() {
