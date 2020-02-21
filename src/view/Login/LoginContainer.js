@@ -12,7 +12,7 @@ const LoginContainer = () => {
       body: JSON.stringify({email, password})
     }).then((response) => {
       response.json().then((result) => {
-        console.log(result);
+        // console.log(result);
         localStorage.setItem('token', result.token)
       })
     });
