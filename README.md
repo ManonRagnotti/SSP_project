@@ -49,7 +49,7 @@ Ce projet m’a permis de ma familiariser avec la syntaxe fonctionnelle et state
 #### Fabien Marques
 
  >- Recherche page hôtels 
- - Infrastructure
+ >- Infrastructure
 
 
 ### Liens
