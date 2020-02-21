@@ -31,6 +31,20 @@ Nous nous sommes aidés de la librairie ant design pour sa simplicité de design
 
 Nous avons également choisi d'utiliser la librairie Fullcalendar car celle ci est compatible avec la sortie de l'algorithme. De plus, celle ci propose de nombreuses proporiétés modulables qui s'intègrent parfaitement au projet. Elle est open source et très bien documentée et nous permet de réaliser l'intéralité des fonctionnalités pensées. 
 
+#### Manon Ragnotti
+
+Nous 
+
+#### Eugenie Roques
+
+Nous 
+
+
+#### Fabien Marques
+
+Nous 
+
+
 ### Liens
  
 #### Back-office deployé 
@@ -46,20 +60,4 @@ Mot de passe: hetic2018
 
 Repository de l'API :
 https://github.com/Mehdi-Verfaillie/samuSocial-api
-
-
-
-
-
-ReactJs
-
- - react-router-dom
- 
-Sass
-
-Ant Design
-
-FullCalendar
-
-
 
