@@ -8,7 +8,8 @@ const HotelsContainer = () => {
   */
 
   const [data, setData] = useState([])
-  const [refresh, setRefresh] = useState(false)
+  const [refresh, setRefresh] = useState(false);
+    const [values, setValues]= useState({hotelFilter : ''});
 
   // const options = {
   //     method: 'GET',
@@ -62,7 +63,7 @@ const HotelsContainer = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps,
   }, [refresh]);
 
-  return (<Hotels setRefresh={setRefresh} data={data}/>)
+  return (<Hotels values={values} setValues={setValues} setRefresh={setRefresh} data={data}/>)
 
 }
 
