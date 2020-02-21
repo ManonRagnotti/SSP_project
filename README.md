@@ -41,7 +41,7 @@ Nous avons également choisi d'utiliser la librairie Fullcalendar car celle ci e
 
 ### Back-office deployé
 
-http://ec2-34-249-204-157.eu-west-1.compute.amazonaws.com:80/login
+http://ec2-34-249-204-157.eu-west-1.compute.amazonaws.com:80
 
 ReactJs
 
@@ -56,10 +56,11 @@ FullCalendar
 ## Liens
  
 ### Back-office deployé 
-http://ec2-34-249-204-157.eu-west-1.compute.amazonaws.com/login
+http://ec2-34-249-204-157.eu-west-1.compute.amazonaws.com:80
 
-### Api déployé 
-http://ec2-34-249-204-157.eu-west-1.compute.amazonaws.com/:3000
+### Api déployée
+http://ec2-34-249-204-157.eu-west-1.compute.amazonaws.com:3000
+
 [repo API](https://github.com/Mehdi-Verfaillie/samuSocial-api)
 
 
