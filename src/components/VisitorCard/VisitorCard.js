@@ -5,7 +5,7 @@ export default({data, v, setRefresh}) => {
 
   //DELETE visitor
   const deleteData = async (_id) => {
-    await fetch('/api/visitors/' + _id, {method: 'DELETE'})
+    await fetch('/api/visitor/' + _id, {method: 'DELETE'})
     await setRefresh(true)
   }
 
