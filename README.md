@@ -1,11 +1,16 @@
 ## Personnes du groupe concernées par le front
 
-
 Manon Ragnotti
 
 Fabien Marques
 
 Eugénie Roques
+
+
+## Identification au Back Office
+Adresse mail : admin@gmail.com
+Mot de passe: hetic2018
+
 
 ## Dossier d'argumentation
 
@@ -36,7 +41,7 @@ Nous avons également choisi d'utiliser la librairie Fullcalendar car celle ci e
 
 ### Back-office deployé
 
-https://github.com/Mehdi-Verfaillie/samuSocial-api
+http://ec2-34-249-204-157.eu-west-1.compute.amazonaws.com/login
 
 ReactJs
 
@@ -51,6 +56,10 @@ FullCalendar
 ## Liens
  
 ### Back-office deployé 
+http://ec2-34-249-204-157.eu-west-1.compute.amazonaws.com/login
+
+### Api déployé 
+http://ec2-34-249-204-157.eu-west-1.compute.amazonaws.com/
 [repo API](https://github.com/Mehdi-Verfaillie/samuSocial-api)
 
 
